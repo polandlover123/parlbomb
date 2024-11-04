@@ -1,8 +1,4 @@
 {
-  lib,
-  self,
-  ...
-}: {
   programs.nixvim.plugins = {
     lsp-signature.enable = true;
     lspkind = {enable = true;};

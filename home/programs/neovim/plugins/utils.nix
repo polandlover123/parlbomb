@@ -5,6 +5,7 @@
       cheatsheet-nvim
     ];
     plugins = {
+      auto-session.enable = true;
       rainbow-delimiters.enable = true;
       yazi.enable = true;
       persistence.enable = true;
@@ -22,6 +23,7 @@
       nvim-autopairs.enable = true;
       friendly-snippets.enable = true;
       todo-comments.enable = true;
+      treesitter-context.enable = true;
       treesitter = {
         enable = true;
         nixGrammars = true;
@@ -47,7 +49,6 @@
           };
         };
       };
-      # treesitter-context.enable = true;
     };
     extraConfigLua = ''
             require 'window-picker'.setup({
@@ -122,7 +123,8 @@
               -- filter using buffer options
               bo = {
                   -- if the file type is one of following, the window will be ignored
-                  filetype = { 'NvimTree', 'neo-tree', 'notify' },
+          -- 'statusline-winbar' draw on 'statusline' if possible, if not 'winbar' will be
+                  filetype = { 'chadtree', 'notify' },
 
                   -- if the file type is one of following, the window will be ignored
                   buftype = { 'terminal' },

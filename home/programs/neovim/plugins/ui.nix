@@ -20,7 +20,7 @@
       lualine = {
         enable = true;
         settings = {
-          options.disabled_filetypes.statusline = ["dashboard" "alpha" "neo-tree"];
+          options.disabled_filetypes.statusline = ["dashboard" "alpha" "chadtree"];
 
           alwaysDivideMiddle = true;
           globalstatus = true;

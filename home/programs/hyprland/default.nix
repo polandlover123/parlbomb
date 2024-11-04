@@ -19,7 +19,7 @@
       inputs.split-monitor-workspaces.packages.${pkgs.system}.split-monitor-workspaces
       inputs.hyprland-plugins.packages.${pkgs.system}.hyprexpo
     ];
-    systemd = {enable = true;};
+    # systemd = {enable = true;};
   };
   home.packages = with pkgs; [
     grimblast

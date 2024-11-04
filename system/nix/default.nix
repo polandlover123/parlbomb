@@ -9,6 +9,10 @@
 
   # we need git for flakes
   environment.systemPackages = with pkgs; [git nixd];
+  system.switch = {
+    enable = false;
+    enableNg = true;
+  };
 
   nix = {
     # pin the registry to avoid downloading and evaling a new nixpkgs version every time
@@ -19,11 +23,12 @@
     nixPath = ["nixpkgs=${inputs.nixpkgs}"];
 
     settings = {
+      accept-flake-config = true;
       auto-optimise-store = true;
       builders-use-substitutes = true;
       experimental-features = ["nix-command" "flakes"];
       flake-registry = "/etc/nix/registry.json";
-
+      keep-going = true;
       # for direnv GC roots
       keep-derivations = true;
       keep-outputs = true;
