@@ -1,0 +1,196 @@
+* {
+  all: unset;
+  border: none;
+  border-radius: 0;
+  font-family: JetBrainsMono, FontAwesome;
+  font-size: 15px;
+  margin: 0;
+  padding: 0;
+  min-height: 0px;
+}
+
+#waybar {
+  background: #262626;
+  color: #262626;
+}
+
+#backlight-slider {
+  background-color: #3a3a3a;
+}
+
+#backlight-slider slider {
+  min-height: 0px;
+  min-width: 0px;
+  opacity: 0;
+  color: aqua;
+  background-image: none;
+  border: none;
+  box-shadow: none;
+}
+
+#backlight-slider trough {
+  min-height: 5px;
+  min-width: 50px;
+  border-radius: 5px;
+  background-color: #262626;
+}
+
+#backlight-slider highlight {
+  min-width: 10px;
+  border-radius: 5px;
+  background-color: #ffaf5f;
+}
+
+#custom-cap-left {
+  color: #78a9ff;
+  background-color: #3a3a3a;
+}
+
+#custom-gap {
+  color: #262626;
+  background-color: #ffaf5f;
+}
+
+#custom-gap.endcap {
+  color: #ffaf5f;
+  background-color: #262626;
+}
+
+#custom-gap-right {
+  color: #262626;
+  background-color: #ffaf5f;
+}
+
+#custom-gap-right.dark {
+  color: #ffaf5f;
+  background-color: #262626;
+}
+
+#custom-cap-left.dark {
+  color: #3a3a3a;
+  background-color: #262626;
+}
+
+#custom-cap-left.dark-orange {
+  color: #3a3a3a;
+  background-color: #ffaf5f;
+}
+
+#custom-cap-right {
+  color: #ffaf5f;
+  background: #3a3a3a;
+}
+
+#custom-cap-right.dark {
+  color: #3a3a3a;
+  background: #ffaf5f;
+}
+
+#idle_inhibitor {
+  background: @bgcolor;
+  padding-left: 20px;
+  padding-right: 10px;
+}
+
+#custom-weather,
+#custom-logo {
+  padding-left: 10px;
+  color: #262626;
+  background: #ffaf5f;
+}
+
+#custom-power {
+  padding-left: 10px;
+  color: #262626;
+  background: #ffaf5f;
+  padding-right: 10px;
+}
+
+#custom-lock {
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #262626;
+  background: #ffaf5f;
+}
+
+#temperature,
+#memory,
+#pulseaudio,
+#custom-vpn,
+#disk,
+#battery {
+  color: #ffaf5f;
+  background: #3a3a3a;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#wireplumber {
+  color: #ffaf5f;
+  background: #3a3a3a;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#window {
+  color: #ffaf5f;
+  background: #3a3a3a;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#workspaces {
+  color: #ffaf5f;
+  background: #3a3a3a;
+
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#clock {
+  background: #ffaf5f;
+  color: #262626;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#clock.clock2 {
+  background: #3a3a3a;
+  color: #ffaf5f;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+#network {
+  background: #ffaf5f;
+  color: #262626;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#bluetooth {
+  background: #ffaf5f;
+  color: #262626;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#user {
+  color: #262626;
+  background-color: #ffaf5f;
+}
+
+#submap {
+  background-color: #78a9ff;
+  color: #393939;
+}
+
+#submap.vim {
+  background-color: #ff7eb6;
+  color: #393939;
+}
+
+group-submap {
+  background-color: #ff7eb6;
+  color: #393939;
+}

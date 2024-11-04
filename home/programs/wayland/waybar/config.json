@@ -1,0 +1,224 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 21,
+  "modules-left": [
+    "group/submap",
+    "group/windows",
+    "custom/cap-left#dark",
+    "custom/gap",
+    "network",
+    "bluetooth",
+    "custom/cap-left",
+    "battery",
+    "wireplumber",
+    "custom/cap-left#dark"
+  ],
+  "wireplumber": {
+    "format": "{icon} {volume}%",
+    "format-muted": "",
+    "on-click": "helvum",
+    "format-icons": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "modules-center": [
+    ""
+  ],
+  "modules-right": [
+    "custom/gap-right#dark",
+    "network#right",
+    "custom/cap-right#dark",
+    "clock#clock2",
+    "custom/cap-right",
+    "clock"
+  ],
+  "backlight/slider": {
+    "min": 0,
+    "max": 100,
+    "orientation": "horizontal",
+    "device": "intel_backlight"
+  },
+  "battery": {
+    "bat": "BAT0",
+    "min-length": 5,
+    "states": {
+      "full": 95,
+      "warning": 30,
+      "critical": 15
+    },
+    "tooltip": false,
+    "full-at": 90,
+    "format-plugged": "{icon} {capacity}%",
+    "format-charging": "{icon} {capacity}%",
+    "format": "{icon} {capacity}%",
+    "format-icons": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  "user": {
+    "format": "{work_M}",
+    "interval": 30
+  },
+  "group/submap": {
+    "orientation": "horizontal",
+    "children-class": "submap-child",
+    "modules": [
+      "hyprland/submap",
+      "custom/cap-left"
+    ]
+  },
+  "group/windows": {
+    "orientation": "horizontal",
+    "drawer": {
+      "transition-duration": 500,
+      "transition-left-to-right": false,
+      "click-to-reveal": true
+    },
+    "modules": [
+      "hyprland/workspaces",
+      "hyprland/window"
+    ]
+  },
+  "custom/lock": {
+    "format": "󰍁",
+    "tooltip": false,
+    "on-click": "hyprlock"
+  },
+  "custom/power": {
+    "format": "",
+    "tooltip": false,
+    "on-click": "systemctl shutdown"
+  },
+  "hyprland/workspaces": {
+    "active-only": true,
+    "format": "{id}"
+  },
+  "hyprland/window": {
+    "format": "{title}"
+  },
+  "clock": {
+    "format": " {:%Y-%m-%d}",
+    "tooltip": false
+  },
+  "clock#clock2": {
+    "format": " {:%I:%M %p}",
+    "tooltip": false
+  },
+  "network": {
+    "format-wifi": "  {essid}",
+    "format-ethernet": " {ipaddr}",
+    "format-linked": " {ipaddr}",
+    "format-disconnected": " Disconnected",
+    "format-disabled": "",
+    "tooltip": false,
+    "max-length": 21,
+    "min-length": 6
+  },
+  "network#right": {
+    "format": "{bandwidthDownBytes}"
+  },
+  "pulseaudio": {
+    "tooltip": false,
+    "min-length": 6,
+    "format": "{icon} {volume}%",
+    "format-bluetooth": "{icon} {volume}%",
+    "format-muted": "MUTE",
+    "format-icons": {
+      "headphone": "",
+      "headset": "",
+      "default": [
+        "",
+        "",
+        ""
+      ]
+    },
+    "scroll-step": 1
+  },
+  "temperature": {
+    "tooltip": false,
+    "min-length": 5,
+    "critical-threshold": 90,
+    "format": "{icon} {temperatureC}°C",
+    "format-critical": "{icon} {temperatureC}°C",
+    "format-icons": {
+      "default": [
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    }
+  },
+  "memory": {
+    "tooltip": false,
+    "format": " {percentage}%",
+    "states": {
+      "critical": 90
+    },
+    "min-length": 5
+  },
+  "disk": {
+    "tooltip": false,
+    "path": "/",
+    "interval": 60,
+    "min-length": 5,
+    "format": " {percentage_used}%",
+    "states": {
+      "critical": 90
+    }
+  },
+  "custom/cap-left": {
+    "tooltip": false,
+    "format": ""
+  },
+  "custom/cap-left#dark": {
+    "tooltip": false,
+    "format": ""
+  },
+  "custom/cap-left#dark-orange": {
+    "tooltip": false,
+    "format": ""
+  },
+  "custom/cap-right": {
+    "tooltip": false,
+    "format": ""
+  },
+  "custom/cap-right#dark": {
+    "tooltip": false,
+    "format": ""
+  },
+  "custom/gap": {
+    "tooltip": false,
+    "format": ""
+  },
+  "custom/gap#endcap": {
+    "tooltip": false,
+    "format": "🯥"
+  },
+  "custom/gap-right": {
+    "tooltip": false,
+    "format": ""
+  },
+  "custom/gap-right#dark": {
+    "tooltip": false,
+    "format": ""
+  },
+  "custom/logo": {
+    "format": "{}",
+    "exec": "echo ' '"
+  },
+  "hyprland/submap": {
+    "format": " {}",
+    "tooltip": false,
+    "always-on": true,
+    "default-submap": "NORMAL"
+  }
+}
