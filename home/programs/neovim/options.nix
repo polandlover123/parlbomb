@@ -1,13 +1,13 @@
 {
   programs.nixvim.globals.mapleader = " ";
-  programs.nixvim.extraConfigLua = ''
-        vim.api.nvim_create_autocmd("LspAttach", {
-      callback = function(args)
-        local client = vim.lsp.get_client_by_id(args.data.client_id)
-        client.server_capabilities.semanticTokensProvider = nil
-      end,
-    });
-  '';
+  # programs.nixvim.extraConfigLua = ''
+  #       vim.api.nvim_create_autocmd("LspAttach", {
+  #     callback = function(args)
+  #       local client = vim.lsp.get_client_by_id(args.data.client_id)
+  #       client.server_capabilities.semanticTokensProvider = nil
+  #     end,
+  #   });
+  # '';
   programs.nixvim.opts = {
     updatetime = 50; # Faster completion
     sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions";

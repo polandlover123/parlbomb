@@ -1,7 +1,5 @@
 # ./hyprland.nix
 {
-  inputs,
-  pkgs,
   config,
   lib,
   ...
@@ -22,16 +20,18 @@
       }
     '';
     settings = {
-      monitor = lib.mapAttrsToList (name: m: let
-        resolution = "${toString m.width}x${toString m.height}@${
-          toString m.refreshRate
-        }";
-        position = "${toString m.x}x${toString m.y}";
-      in "${name},${
-        if m.enabled
-        then "${resolution},${position},1"
-        else "disable"
-      }") (config.monitors);
+      monitor =
+        lib.mapAttrsToList (name: m: let
+          resolution = "${toString m.width}x${toString m.height}@${
+            toString m.refreshRate
+          }";
+          position = "${toString m.x}x${toString m.y}";
+        in "${name},${
+          if m.enabled
+          then "${resolution},${position},1"
+          else "disable"
+        }")
+        config.monitors;
       debug = {disable_logs = false;};
       cursor = {no_hardware_cursors = true;};
       general = {
@@ -80,7 +80,7 @@
       xwayland = {force_zero_scaling = true;};
       render = {explicit_sync = true;};
       misc = {
-        vrr = 0;
+        vrr = 1;
         close_special_on_empty = true;
         disable_hyprland_logo = 2;
         disable_splash_rendering = false;

@@ -4,7 +4,6 @@
   ...
 }: {
   programs.nixvim.plugins = {
-    nvim-lightbulb.enable = true;
     lsp-signature.enable = true;
     lspkind = {enable = true;};
     lsp-format.enable = true;

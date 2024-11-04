@@ -3,7 +3,7 @@
   config,
   ...
 }: {
-  imports = [inputs.agenix.nixosModules.default];
+  # imports = [inputs.agenix.nixosModules.default];
   services = {
     syncthing = {
       enable = true;

@@ -4,6 +4,15 @@
   programs.nixvim = {
     colorschemes.oxocarbon.enable = true;
     plugins = {
+      barbecue = {
+        enable = true;
+        settings = {
+          theme = "auto";
+        };
+      };
+      fidget = {
+        enable = true;
+      };
       toggleterm = {
         enable = true;
       };
@@ -16,7 +25,7 @@
           alwaysDivideMiddle = true;
           globalstatus = true;
           ignoreFocus = ["chadtree"];
-          extensions = ["fzf"];
+          extensions = ["fzf" "chadtree" "oil" "toggleterm"];
           theme = "auto";
           componentSeparators = {
             left = "|";
