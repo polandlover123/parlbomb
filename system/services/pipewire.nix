@@ -5,8 +5,18 @@
     alsa.support32Bit = true;
     jack.enable = true;
     pulse.enable = true;
-
-    wireplumber.extraConfig."wireplumber.profiles".main."monitor.libcamera" = "disabled";
+    wireplumber = {
+      enable = true;
+      extraConfig = {
+        "10-disable-camera" = {
+          "wireplumber.profiles" = {
+            main = {
+              "monitor.libcamera" = "disabled";
+            };
+          };
+        };
+      };
+    };
   };
 
   hardware.pulseaudio.enable = lib.mkForce false;

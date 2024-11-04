@@ -64,12 +64,12 @@
     formatter.x86_64-linux = pkgs.alejandra;
     nixosConfigurations = {
       digglydoo = nixpkgs.lib.nixosSystem {
-        specialArgs = {inherit inputs outputs;};
+        specialArgs = {inherit self inputs outputs;};
         # > Our main nixos configuration file <
         modules = [./hosts/digglydoo];
       };
       pessima = nixpkgs.lib.nixosSystem {
-        specialArgs = {inherit inputs outputs;};
+        specialArgs = {inherit self inputs outputs;};
         modules = [./hosts/pessima];
       };
     };

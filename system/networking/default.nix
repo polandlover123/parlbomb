@@ -8,7 +8,10 @@
 
     networkmanager = {
       enable = true;
-      wifi.powersave = lib.mkForce false;
+      wifi = {
+        powersave = lib.mkForce false;
+        macAddress = "random";
+      };
     };
   };
 

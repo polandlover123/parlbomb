@@ -1,7 +1,6 @@
 {
   programs.nixvim.plugins = {
     luasnip.enable = true;
-    blink-cmp.enable = true;
     cmp-buffer = {enable = true;};
     cmp-emoji = {enable = true;};
     cmp-nvim-lsp = {enable = true;};

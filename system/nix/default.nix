@@ -1,5 +1,5 @@
 {
-  config,
+  self,
   pkgs,
   inputs,
   lib,
@@ -8,7 +8,8 @@
   imports = [./nh.nix ./nixpkgs.nix ./subs.nix];
 
   # we need git for flakes
-  environment.systemPackages = with pkgs; [git nixd];
+
+  environment.etc."parlbomb".source = self;
   system.switch = {
     enable = false;
     enableNg = true;

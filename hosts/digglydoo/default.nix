@@ -13,11 +13,6 @@
   ];
   services = {displayManager.ly = {enable = true;};};
 
-  security.pam.services = {
-    ly = {enableGnomeKeyring = true;};
-    login = {enableGnomeKeyring = true;};
-  };
-
   networking.hostName = "digglydoo";
 
   security.tpm2.enable = true;
