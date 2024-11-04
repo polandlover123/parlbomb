@@ -22,7 +22,7 @@
     systemd = {enable = true;};
   };
   home.packages = with pkgs; [
-    inputs.hyprland-contrib.packages.${pkgs.system}.grimblast
+    grimblast
     #inputs.self.packages.${pkgs.system}.wl-ocr
     clipse
     wl-clipboard
