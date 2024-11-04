@@ -12,6 +12,11 @@
         spec = [
           # General Mappings
           {
+            __unkeyed-1 = "<leader>q";
+            mode = "n";
+            group = "+quit/session";
+          }
+          {
             __unkeyed-1 = "<leader>c";
             mode = ["n" "v"];
             group = "+code";
@@ -51,65 +56,10 @@
             mode = "n";
             group = "+harpoon";
           }
-          # Tabs
           {
+            __unkeyed-1 = "<leader><Tab>";
             mode = "n";
-            key = "<leader><tab>l";
-            action = "<cmd>tablast<cr>";
-            options = {
-              silent = true;
-              desc = "Last tab";
-            };
-          }
-
-          {
-            mode = "n";
-            key = "<leader><tab>f";
-            action = "<cmd>tabfirst<cr>";
-            options = {
-              silent = true;
-              desc = "First Tab";
-            };
-          }
-
-          {
-            mode = "n";
-            key = "<leader><tab><tab>";
-            action = "<cmd>tabnew<cr>";
-            options = {
-              silent = true;
-              desc = "New Tab";
-            };
-          }
-
-          {
-            mode = "n";
-            key = "<leader><tab>]";
-            action = "<cmd>tabnext<cr>";
-            options = {
-              silent = true;
-              desc = "Next Tab";
-            };
-          }
-
-          {
-            mode = "n";
-            key = "<leader><tab>d";
-            action = "<cmd>tabclose<cr>";
-            options = {
-              silent = true;
-              desc = "Close tab";
-            };
-          }
-
-          {
-            mode = "n";
-            key = "<leader><tab>[";
-            action = "<cmd>tabprevious<cr>";
-            options = {
-              silent = true;
-              desc = "Previous Tab";
-            };
+            group = "+tab";
           }
         ];
         win = {
@@ -178,6 +128,76 @@
       {
         key = "<C-l>";
         action = "<cmd>TmuxNavigateRight<cr>";
+      }
+      {
+        mode = "n";
+        key = "<leader>qq";
+        action = "<cmd>quitall<cr><esc>";
+        options = {
+          silent = true;
+          desc = "Quit all";
+        };
+      }
+
+      {
+        mode = "n";
+        key = "<leader>qs";
+        action = ":lua require('persistence').load()<cr>";
+        options = {
+          silent = true;
+          desc = "Restore session";
+        };
+      }
+
+      {
+        mode = "n";
+        key = "<leader>ql";
+        action = "<cmd>lua require('persistence').load({ last = true })<cr>";
+        options = {
+          silent = true;
+          desc = "Restore last session";
+        };
+      }
+
+      {
+        mode = "n";
+        key = "<leader>qd";
+        action = "<cmd>lua require('persistence').stop()<cr>";
+        options = {
+          silent = true;
+          desc = "Don't save current session";
+        };
+      }
+
+      # Toggle
+      {
+        mode = "n";
+        key = "<leader>ul";
+        action = ":lua ToggleLineNumber()<cr>";
+        options = {
+          silent = true;
+          desc = "Toggle Line Numbers";
+        };
+      }
+
+      {
+        mode = "n";
+        key = "<leader>uL";
+        action = ":lua ToggleRelativeLineNumber()<cr>";
+        options = {
+          silent = true;
+          desc = "Toggle Relative Line Numbers";
+        };
+      }
+
+      {
+        mode = "n";
+        key = "<leader>uw";
+        action = ":lua ToggleWrap()<cr>";
+        options = {
+          silent = true;
+          desc = "Toggle Line Wrap";
+        };
       }
 
       # UI
@@ -378,6 +398,66 @@
         key = "<leader>cb";
         action = "<cmd>lua require('dap').toggle_breakpoint()<CR>";
         options.desc = "Toggle breakpoint";
+      }
+      # Tabs
+      {
+        mode = "n";
+        key = "<leader><tab>l";
+        action = "<cmd>tablast<cr>";
+        options = {
+          silent = true;
+          desc = "Last tab";
+        };
+      }
+
+      {
+        mode = "n";
+        key = "<leader><tab>f";
+        action = "<cmd>tabfirst<cr>";
+        options = {
+          silent = true;
+          desc = "First Tab";
+        };
+      }
+
+      {
+        mode = "n";
+        key = "<leader><tab><tab>";
+        action = "<cmd>tabnew<cr>";
+        options = {
+          silent = true;
+          desc = "New Tab";
+        };
+      }
+
+      {
+        mode = "n";
+        key = "<leader><tab>]";
+        action = "<cmd>tabnext<cr>";
+        options = {
+          silent = true;
+          desc = "Next Tab";
+        };
+      }
+
+      {
+        mode = "n";
+        key = "<leader><tab>d";
+        action = "<cmd>tabclose<cr>";
+        options = {
+          silent = true;
+          desc = "Close tab";
+        };
+      }
+
+      {
+        mode = "n";
+        key = "<leader><tab>[";
+        action = "<cmd>tabprevious<cr>";
+        options = {
+          silent = true;
+          desc = "Previous Tab";
+        };
       }
     ];
   };
