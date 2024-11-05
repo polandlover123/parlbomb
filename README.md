@@ -8,7 +8,7 @@ because i can
 
 # how
 
-nixos-install --flake github#parlbomb/parlbomb
+```nixos-install --flake github#parlbomb/parlbomb```
 
 # broke
 
