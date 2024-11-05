@@ -1,9 +1,4 @@
-{
-  pkgs,
-  inputs,
-  ...
-}: {
-  imports = [inputs.minegrub.nixosModules.default];
+{pkgs, ...}: {
   boot = {
     extraModprobeConfig = ''
       options iwlwifi 11n_disable=8
@@ -20,7 +15,6 @@
         devices = ["nodev"];
         efiSupport = true;
         useOSProber = true;
-        minegrub-world-sel-theme.enable = true;
       };
     };
   };

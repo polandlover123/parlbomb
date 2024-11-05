@@ -1,6 +1,29 @@
 {
   programs.nixvim.plugins = {
     luasnip.enable = true;
+    # blink-cmp = {
+    #   enable = true;
+    #   settings = {
+    #     auto_brackets.enabled = true;
+    #     highlight = {
+    #       use_nvim_cmp_as_default = true;
+    #     };
+    #     documentation.enable = true;
+    #     keymap = {
+    #       accept = "<C-y>";
+    #       hide = "<C-e>";
+    #       hide_documentation = "<C-space>";
+    #       scroll_documentation_down = "<C-f>";
+    #       scroll_documentation_up = "<C-b>";
+    #       select_next = "<C-n>";
+    #       select_prev = "<C-p>";
+    #       show = "<C-space>";
+    #       show_documentation = "<C-space>";
+    #       snippet_backward = "<S-Tab>";
+    #       snippet_forward = "<Tab>";
+    #     };
+    #   };
+    # };
     cmp-buffer = {enable = true;};
     cmp-emoji = {enable = true;};
     cmp-nvim-lsp = {enable = true;};
@@ -22,20 +45,20 @@
           {name = "mkdnflow";}
           {name = "path";}
         ];
-        window = {
-          completion = {
-            winhighlight = "FloatBorder:CmpBorder,Normal:CmpPmenu,Search:PmenuSel";
-            scrollbar = false;
-            sidePadding = 0;
-            border = ["╭" "─" "╮" "│" "╯" "─" "╰" "│"];
-          };
-
-          documentation = {
-            border = ["╭" "─" "╮" "│" "╯" "─" "╰" "│"];
-            winhighlight = "FloatBorder:CmpBorder,Normal:CmpPmenu,Search:PmenuSel";
-          };
-        };
-
+        # window = {
+        #   completion = {
+        #     winhighlight = "FloatBorder:CmpBorder,Normal:CmpPmenu,Search:PmenuSel";
+        #     scrollbar = false;
+        #     sidePadding = 0;
+        #     border = ["╭" "─" "╮" "│" "╯" "─" "╰" "│"];
+        #   };
+        #
+        #   documentation = {
+        #     border = ["╭" "─" "╮" "│" "╯" "─" "╰" "│"];
+        #     winhighlight = "FloatBorder:CmpBorder,Normal:CmpPmenu,Search:PmenuSel";
+        #   };
+        # };
+        #
         mapping = {
           "<C-n>" = "cmp.mapping.select_next_item()";
           "<C-p>" = "cmp.mapping.select_prev_item()";
