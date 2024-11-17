@@ -17,7 +17,7 @@
     package = inputs.hyprland.packages.${pkgs.system}.default;
     plugins = [
       inputs.split-monitor-workspaces.packages.${pkgs.system}.split-monitor-workspaces
-      inputs.hyprland-plugins.packages.${pkgs.system}.hyprexpo
+      # inputs.hyprland-plugins.packages.${pkgs.system}.hyprexpo
     ];
     # systemd = {enable = true;};
   };
@@ -31,6 +31,7 @@
     nautilus
   ];
   home.sessionVariables = {
+    NVD_BACKEND = "direct";
     QT_QPA_PLATFORM = "wayland";
     SDL_VIDEODRIVER = "wayland";
     XDG_SESSION_TYPE = "wayland";

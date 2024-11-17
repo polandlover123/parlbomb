@@ -10,5 +10,6 @@
     ./ssh.nix
     ./xdg.nix
     ./alacritty
+    ./kitty
   ];
 }

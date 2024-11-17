@@ -1,9 +1,12 @@
 {
   programs.nixvim.plugins = {
+    typst-vim.enable = true;
     lsp-signature.enable = true;
-    lspkind = {enable = true;};
+    lspkind = {
+      enable = true;
+    };
     lsp-format.enable = true;
-    lsp-lines.enable = true;
+    # lsp-lines.enable = true;
     lsp = {
       enable = true;
       servers = {
@@ -30,11 +33,13 @@
             };
           };
         };
+        tinymist.enable = true;
         hyprls.enable = true;
         rust_analyzer = {
           enable = true;
           installRustc = true;
           installCargo = true;
+          installRustfmt = true;
         };
         bashls.enable = true;
         clangd.enable = true;
@@ -55,11 +60,16 @@
         "K" = "hover";
       };
     };
-    # me whne the
     none-ls = {
       enable = true;
+      enableLspFormat = true;
       sources = {
-        completion = {spell.enable = true;};
+        code_actions = {
+          statix.enable = true;
+        };
+        completion = {
+          spell.enable = true;
+        };
         diagnostics = {
           golangci_lint.enable = true;
           statix.enable = true;

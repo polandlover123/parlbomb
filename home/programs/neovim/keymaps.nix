@@ -87,6 +87,11 @@
         options.desc = "terminal";
       }
       {
+        key = "<C-S-t>";
+        action = "<cmd>ToggleTerm<cr>";
+        options.desc = "terminal";
+      }
+      {
         key = "<leader>e";
         action = "<cmd>Oil --float<cr>";
         options.desc = "Oil";
@@ -376,7 +381,7 @@
       }
       {
         key = "<leader>cf";
-        action = "<cmd>lua vim.lsp.buf.formatting()<cr>";
+        action = "<cmd>lua vim.lsp.buf.format()<cr>";
         options.desc = "LSP Formatting";
       }
       {

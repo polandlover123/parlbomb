@@ -15,6 +15,5 @@
     ./services/printing.nix
     ./programs
   ];
-
   services.fwupd.enable = true;
 }

@@ -6,7 +6,7 @@
       sushi.enable = true;
     };
     dbus = {
-      packages = with pkgs; [dconf gcr gnome.gnome-settings-daemon udisks2];
+      packages = with pkgs; [dconf gcr gnome-settings-daemon udisks2];
       implementation = "broker";
       enable = true;
     };

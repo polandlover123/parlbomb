@@ -3,9 +3,18 @@
     enable = true;
     settings = {
       font = {
-        normal.family = "JetBrains Mono Nerd Font";
-        bold.family = "JetBrains Mono Nerd Font";
-        italic.family = "JetBrains Mono Nerd Font";
+        normal = {
+          family = "Monaspace Radon";
+          style = "Regular";
+        };
+        bold = {
+          family = "Monaspace Radon";
+          style = "Bold";
+        };
+        italic = {
+          family = "Monaspace Radon";
+          style = "Italic";
+        };
       };
       colors.primary = {
         background = "#161616";

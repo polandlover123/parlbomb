@@ -5,10 +5,10 @@
   lib,
   ...
 }: {
-  imports = [./nh.nix ./nixpkgs.nix ./subs.nix];
+  imports = [inputs.nix-index-database.nixosModules.nix-index ./nh.nix ./nixpkgs.nix ./subs.nix];
 
   # we need git for flakes
-
+  programs.nix-index-database.comma.enable = true;
   environment.etc."parlbomb".source = self;
   system.switch = {
     enable = false;

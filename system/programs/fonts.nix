@@ -18,6 +18,7 @@
       torus
       ipafont
       source-code-pro
+      monaspace
 
       #mono
       jetbrains-mono
@@ -32,8 +33,8 @@
       antialias = true;
       defaultFonts = {
         monospace = ["Meslo LG M Regular Nerd Font Complete Mono"];
-        serif = ["Torus Pro"];
-        sansSerif = ["Torus Pro"];
+        serif = ["Monaspace Xenon"];
+        sansSerif = ["Monaspace Radon"];
       };
     };
   };

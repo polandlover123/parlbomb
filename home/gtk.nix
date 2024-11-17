@@ -37,16 +37,16 @@
       };
     };
     font = {
-      name = "Torus Pro";
-      package = pkgs.torus;
+      name = "Monaspace Radon";
+      package = pkgs.monaspace;
       size = 9;
     };
     theme = {
-      name = "Gruvbox-Orange-Dark";
-      package = pkgs.gruvbox-gtk-theme.override {
+      name = "Graphite-pink-Dark";
+      package = pkgs.graphite-gtk-theme.override {
         colorVariants = ["dark"];
-        themeVariants = ["orange"];
-        tweakVariants = ["macos"];
+        themeVariants = ["pink"];
+        tweaks = ["rimless" "darker" "normal" "colorful"];
       };
     };
   };

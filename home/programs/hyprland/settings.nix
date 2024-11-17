@@ -87,8 +87,10 @@
         mouse_move_enables_dpms = true;
         key_press_enables_dpms = true;
         enable_swallow = true;
-        swallow_regex = "^(alacritty)$";
+        swallow_regex = "(foot|kitty|Alacritty)";
         new_window_takes_over_fullscreen = 2;
+        initial_workspace_tracking = 1;
+        middle_click_paste = false;
       };
     };
   };

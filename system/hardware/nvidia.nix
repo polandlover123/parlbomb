@@ -30,6 +30,7 @@
         vaapiVdpau
         libvdpau-va-gl
         vulkan-validation-layers
+        nvidia-vaapi-driver
       ];
     };
   };

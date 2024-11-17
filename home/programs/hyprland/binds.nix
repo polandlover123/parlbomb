@@ -64,7 +64,7 @@ in {
           #special workspaces
           "SUPER, grave, togglespecialworkspace, discord"
           "SUPER, tab, exec, pgrep spotify && hyprctl dispatch togglespecialworkspace spotify || spotify &"
-          "SUPER, M, exec, pgrep qalculate-gtk && hyprctl dispatch togglespecialworkspace calculator || qalculate-gtk &"
+          "super, m, exec, kitty"
           # screenshotting
           "SUPER, S, exec, grimblast copysave area"
           #volume
@@ -73,7 +73,7 @@ in {
           ", XF86AudioMute,exec, swayosd-client --output-volume mute-toggle "
           ",XF86AudioNext, exec, playerctl next"
           ", XF86AudioPrev, exec, playerctl previous"
-          "SUPERSHIFT, A, hyprexpo:expo,toggle"
+          # "SUPERSHIFT, A, hyprexpo:expo,toggle"
         ]
         ++ workspaces;
       binde = [
