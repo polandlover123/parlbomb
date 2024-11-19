@@ -19,13 +19,10 @@
 
   services = {fstrim.enable = true;};
   home-manager = {
-    useGlobalPkgs = true;
-    useUserPackages = true;
     users."parliamentbomber" = import ../../home/homes/digglydoo;
     extraSpecialArgs = {
       inherit inputs;
       inherit self;
     };
-    backupFileExtension = "hmbackup";
   };
 }

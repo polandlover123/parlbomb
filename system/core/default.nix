@@ -1,5 +1,5 @@
 {lib, ...}: {
-  imports = [./security.nix ./users.nix ../nix ./ssh.nix];
+  imports = [./security.nix ./bootloader.nix ./users.nix ../nix ./ssh.nix];
   programs.zsh.enable = true;
   documentation.dev.enable = true;
 

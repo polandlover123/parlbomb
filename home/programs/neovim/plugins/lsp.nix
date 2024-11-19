@@ -11,10 +11,6 @@
       enable = true;
       keymaps = {
         silent = true;
-        diagnostic = {
-          "<leader>j" = "goto_next";
-          "<leader>k" = "goto_prev";
-        };
       };
       servers = {
         nixd = {

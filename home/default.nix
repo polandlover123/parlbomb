@@ -1,7 +1,29 @@
-{self, ...}: {
+{pkgs, ...}: {
+  imports = [
+    ./gtk.nix
+    ./zsh
+    ./modules/monitors.nix
+    ./programs
+    ./services
+  ];
+  home = {
+    stateVersion = "24.05"; # Please read the comment before changing.
+    username = "parliamentbomber";
+    homeDirectory = "/home/parliamentbomber";
+    packages = with pkgs; [
+      google-chrome
+      webcord-vencord
+      firefox
+      vscode
+    ];
+  };
+  programs.home-manager.enable = true;
+
   nixpkgs = {
-    config.allowUnfree = true;
-    config.allowUnfreePredicate = _: true;
-    config.permittedInsecurePackages = ["electron-25.9.0"];
+    config = {
+      allowUnfree = true;
+      allowUnfreePredicate = _: true;
+      permittedInsecurePackages = ["electron-25.9.0"];
+    };
   };
 }

@@ -54,6 +54,10 @@ in {
           "SUPER, J, movefocus, d"
           "SUPER, K, movefocus, u"
           "SUPER, L, movefocus, r"
+          "SUPERSHIFT, H, movewindow, l"
+          "SUPERSHIFT, J, movewindow, d"
+          "SUPERSHIFT, K, movewindow, u"
+          "SUPERSHIFT, L, movewindow, r"
           # programs
           "SUPER, escape, exec, hyprlock"
           "SUPER, E, exec, nautilus --new-window"

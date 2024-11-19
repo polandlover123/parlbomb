@@ -2,6 +2,7 @@
   imports = [
     ./hyprland
     ./spotify
+    ./stylix
     ./hyprlock
     ./neovim
     ./terminal/foot

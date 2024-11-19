@@ -10,11 +10,12 @@
   # we need git for flakes
   programs.nix-index-database.comma.enable = true;
   environment.etc."parlbomb".source = self;
-  system.switch = {
-    enable = false;
-    enableNg = true;
+  system = {
+    switch = {
+      enable = false;
+      enableNg = true;
+    };
   };
-
   nix = {
     # pin the registry to avoid downloading and evaling a new nixpkgs version every time
     registry = lib.mapAttrs (_: v: {flake = v;}) inputs;

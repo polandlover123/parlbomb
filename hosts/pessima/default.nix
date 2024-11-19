@@ -1,27 +1,33 @@
 {
   inputs,
   self,
+  pkgs,
   ...
 }: {
   imports = [
     ./hardware-configuration.nix
     ../../system
-    ../../system/core/bootloader.nix
+    ../../system/hardware/intel.nix
     inputs.home-manager.nixosModules.default
   ];
-  services = {displayManager.ly = {enable = true;};};
+  # services = {displayManager.ly = {enable = true;};};
+  services.greetd = {
+    enable = true;
+    vt = 2;
+    settings = {
+      default_session = {
+        command = "${pkgs.greetd.tuigreet}/bin/tuigreet --cmd Hyprland";
+        user = "greeter";
+      };
+    };
+  };
   networking.hostName = "pessima";
-  security.pam.sshAgentAuth.enable = true;
-  security.tpm2.enable = true;
   services = {
-    fstrim.enable = true;
     logind.extraConfig = ''
       HandlePowerKey=suspend
     '';
   };
   home-manager = {
-    useGlobalPkgs = true;
-    useUserPackages = true;
     users."parliamentbomber" = import ../../home/homes/pessima;
     extraSpecialArgs = {
       inherit inputs;

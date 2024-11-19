@@ -47,6 +47,7 @@
     # userland niceness
     rtkit.enable = true;
     pam = {
+      sshAgentAuth.enable = true;
       services = {
         hyprlock.text = "auth include login";
         login = {

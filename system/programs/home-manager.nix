@@ -4,6 +4,6 @@
   home-manager = {
     useGlobalPkgs = true;
     useUserPackages = true;
-    backupFileExtension = "skibidi";
+    backupFileExtension = "hmbackup";
   };
 }
