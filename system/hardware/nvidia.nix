@@ -5,6 +5,7 @@
 }: {
   services.xserver.videoDrivers = ["nvidia"];
   environment.sessionVariables = {
+    VDPAU_DRIVER = "nvidia";
     LIBVA_DRIVER_NAME = "nvidia";
     GBM_BACKEND = "nvidia-drm";
     __GLX_VENDOR_LIBRARY_NAME = "nvidia";
@@ -14,7 +15,7 @@
   services.xserver.dpi = 96;
   environment.variables = {GDK_SCALE = "0.5";};
   boot = {
-    kernelParams = ["nvidia-drm.fbdev=1" "nvidia.NVreg_PreserveVideoMemoryAllocations=1"];
+    kernelParams = ["nvidia.NVreg_PreserveVideoMemoryAllocations=1"];
   };
   hardware = {
     nvidia = {

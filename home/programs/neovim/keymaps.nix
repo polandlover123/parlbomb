@@ -385,16 +385,6 @@
         options.desc = "LSP Formatting";
       }
       {
-        key = "<leader>cn";
-        action = "<cmd>lua vim.lsp.diagnostic.goto_next()<cr>";
-        options.desc = "LSP Next Diagnostic";
-      }
-      {
-        key = "<leader>cp";
-        action = "<cmd>lua vim.lsp.diagnostic.goto_prev()<cr>";
-        options.desc = "LSP Previous Diagnostic";
-      }
-      {
         key = "<leader>cu";
         action = "<cmd>lua require('dapui').toggle()<CR>";
         options.desc = "Toggle Dapui";

@@ -1,7 +1,7 @@
-{ pkgs, ... }: {
+{pkgs, ...}: {
   programs.nixvim.plugins.dap = {
     enable = true;
-    adapters = { };
+    adapters = {};
     signs = {
       dapBreakpoint = {
         text = "●";
@@ -21,8 +21,8 @@
         enable = true;
         delve.path = "${pkgs.delve}/bin/dlv";
       };
-      dap-ui = { enable = true; };
-      dap-virtual-text = { enable = true; };
+      dap-ui = {enable = true;};
+      dap-virtual-text = {enable = true;};
     };
   };
 }

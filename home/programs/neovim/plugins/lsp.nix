@@ -9,6 +9,13 @@
     # lsp-lines.enable = true;
     lsp = {
       enable = true;
+      keymaps = {
+        silent = true;
+        diagnostic = {
+          "<leader>j" = "goto_next";
+          "<leader>k" = "goto_prev";
+        };
+      };
       servers = {
         nixd = {
           autostart = true;
@@ -17,17 +24,29 @@
             nixpkgs = {
               expr = "import <nixpkgs> { }";
             };
+            # options = {
+            #   nixos = {
+            #     expr = ''
+            #       let configs = (builtins.getFlake self.outPath).nixosConfigurations;
+            #       in (builtins.head (builtins.attrValues configs)).options'
+            #     '';
+            #   };
+            #   home_manager = {
+            #     expr = ''
+            #       let configs = (builtins.getFlake self.outPath).homeConfigurations;
+            #       in (builtins.head (builtins.attrValues configs)).options
+            #     '';
+            #   };
+            # };
             options = {
               nixos = {
                 expr = ''
-                  let configs = (builtins.getFlake self.outPath).nixosConfigurations;
-                  in (builtins.head (builtins.attrValues configs)).options'
+                  let configs = (builtins.getFlake ("git+file://" + builtins.toString ./.)).nixosConfigurations; in (builtins.head (builtins.attrValues configs)).options
                 '';
               };
               home_manager = {
                 expr = ''
-                  let configs = (builtins.getFlake self.outPath).homeConfigurations;
-                  in (builtins.head (builtins.attrValues configs)).options
+                  let configs = (builtins.getFlake ("git+file://" + builtins.toString ./.)).homeConfigurations; in (builtins.head (builtins.attrValues configs)).options
                 '';
               };
             };
@@ -66,9 +85,6 @@
       sources = {
         code_actions = {
           statix.enable = true;
-        };
-        completion = {
-          spell.enable = true;
         };
         diagnostics = {
           golangci_lint.enable = true;

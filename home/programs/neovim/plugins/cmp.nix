@@ -3,6 +3,8 @@
     blink-cmp = {
       enable = true;
       settings = {
+        nerd_font_variant = "mono";
+        accept.auto_brackets.enabled = true;
         highlight = {
           use_nvim_cmp_as_default = true;
         };
@@ -56,7 +58,29 @@
     copilot-lua = {
       enable = true;
       panel.enabled = false;
-      suggestion.enabled = false;
+      filetypes = {
+        yaml = false;
+        markdown = false;
+        help = false;
+        gitcommit = false;
+        gitrebase = false;
+        hgcommit = false;
+        svn = false;
+        cvs = false;
+        "." = false;
+        "*" = true;
+      };
+      suggestion = {
+        autoTrigger = true;
+        keymap = {
+          accept = "<C-l>";
+          acceptWord = false;
+          acceptLine = false;
+          next = "<C-]>";
+          prev = "<C-[>";
+          dismiss = "<C-c>";
+        };
+      };
     };
     # cmp = {
     #   enable = true;

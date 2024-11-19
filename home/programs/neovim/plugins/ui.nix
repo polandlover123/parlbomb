@@ -84,6 +84,44 @@
       };
       noice = {
         enable = true;
+        settings = {
+          presets = {
+            command_palette = true;
+            inc_rename = true;
+            lsp_doc_border = true;
+            long_message_to_split = true;
+          };
+
+          views = {
+            popupmenu = {
+              backend = "cmp";
+            };
+          };
+
+          notify = {
+            enabled = true;
+          };
+
+          messages = {
+            enabled = true;
+          };
+
+          lsp = {
+            message = {
+              enabled = true;
+            };
+
+            progress = {
+              enabled = false;
+              view = "mini";
+            };
+          };
+
+          popupmenu = {
+            enabled = true;
+            backend = "nui";
+          };
+        };
       };
       gitsigns = {
         enable = true;
