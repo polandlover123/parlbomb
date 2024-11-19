@@ -72,14 +72,14 @@
       };
       suggestion = {
         autoTrigger = true;
-        keymap = {
-          accept = "<C-l>";
-          acceptWord = false;
-          acceptLine = false;
-          next = "<C-]>";
-          prev = "<C-[>";
-          dismiss = "<C-c>";
-        };
+        # keymap = {
+        #   accept = "<C-l>";
+        #   acceptWord = false;
+        #   acceptLine = false;
+        #   next = "<C-]>";
+        #   prev = "<C-[>";
+        #   dismiss = "<C-c>";
+        # };
       };
     };
     # cmp = {
