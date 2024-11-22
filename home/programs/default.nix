@@ -2,10 +2,8 @@
   imports = [
     ./hyprland
     ./spotify
-    ./stylix
     ./hyprlock
     ./neovim
-    ./terminal/foot
     ./git
     ./polkit.nix
     ./ssh.nix

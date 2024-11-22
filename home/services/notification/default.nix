@@ -1,7 +1,6 @@
 {
   services.mako = {
     enable = true;
-    sort = "+time";
     maxVisible = -1;
     defaultTimeout = 1500;
     anchor = "top-right";
@@ -10,6 +9,7 @@
     borderColor = "#ffffff";
     borderSize = 1;
     borderRadius = 0;
+    height = 100;
 
     margin = "50,0,0,0";
     maxIconSize = 128;
@@ -17,7 +17,7 @@
     width = 350;
     layer = "overlay";
     font = "Monaspace Radon";
-    format = "<span foreground='#be95ff' size='14000' weight='bold'>%s</span>\n%b";
+    format = "<span foreground='#be95ff' size='14000' weight='bold'>%s</span>";
     extraConfig = ''
       on-button-left=invoke-default-action
       text-alignment=center

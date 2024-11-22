@@ -1,0 +1,79 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 35,
+  "modules-left": [
+    "hyprland/workspaces",
+    "network",
+    "battery"
+  ],
+  "modules-center": [
+    "hyprland/submap"
+  ],
+  "modules-right": [
+    "wireplumber",
+    "clock#clock2",
+    "clock"
+  ],
+  "wireplumber": {
+    "format": "{icon} {volume}%",
+    "format-muted": "",
+    "on-click": "helvum",
+    "format-icons": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "battery": {
+    "bat": "BAT0",
+    "min-length": 5,
+    "states": {
+      "full": 95,
+      "warning": 30,
+      "critical": 15
+    },
+    "tooltip": false,
+    "full-at": 90,
+    "format-plugged": "{icon} {capacity}%",
+    "format-charging": "{icon} {capacity}%",
+    "format": "{icon} {capacity}%",
+    "format-icons": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  "network": {
+    "format-wifi": "  {essid}",
+    "format-ethernet": " {ipaddr}",
+    "format-linked": " {ipaddr}",
+    "format-disconnected": " Disconnected",
+    "format-disabled": "",
+    "tooltip": false,
+    "max-length": 21,
+    "min-length": 6
+  },
+  "hyprland/submap": {
+    "format": "{}",
+    "tooltip": false,
+    "always-on": true,
+    "default-submap": "NORMAL"
+  },
+  "clock#clock2": {
+    "format": " {:%I:%M %p}",
+    "tooltip": false
+  },
+  "clock": {
+    "format": " {:%Y-%m-%d}",
+    "tooltip": false
+  },
+  "hyprland/workspaces": {
+    "active-only": true,
+    "format": "{name}",
+    "show-special": true,
+    "special-visible-only": true
+  }
+}

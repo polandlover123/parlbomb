@@ -1,5 +1,4 @@
 {pkgs, ...}: let
-  # binds SUPER + [shift +] {1..10} to [move to] workspace {1..10} - stolen from fufexan
   workspaces = builtins.concatLists (builtins.genList (x: let
       ws = let c = (x + 1) / 10; in builtins.toString (x + 1 - (c * 10));
     in [

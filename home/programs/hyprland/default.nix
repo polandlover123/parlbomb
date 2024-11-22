@@ -23,7 +23,6 @@
   };
   home.packages = with pkgs; [
     grimblast
-    #inputs.self.packages.${pkgs.system}.wl-ocr
     clipse
     wl-clipboard
     swayosd
@@ -35,6 +34,6 @@
     QT_QPA_PLATFORM = "wayland";
     SDL_VIDEODRIVER = "wayland";
     XDG_SESSION_TYPE = "wayland";
-    HYPRCURSOR_THEME = "macOS";
+    HYPRCURSOR_THEME = "macOS-Monterey";
   };
 }
