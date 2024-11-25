@@ -24,7 +24,10 @@
       ];
       enable = true;
       defaultKeymap = "emacs";
-      shellAliases = {rm = "rm -i";};
+      shellAliases = {
+        rm = "rm -i";
+        g = "git";
+      };
       syntaxHighlighting.enable = true;
       autosuggestion.enable = true;
       initExtra = ''

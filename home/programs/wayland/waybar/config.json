@@ -3,7 +3,8 @@
   "position": "top",
   "height": 21,
   "modules-left": [
-    "group/submap",
+    "user",
+    "custom/cap-left#lighterblue",
     "group/windows",
     "custom/cap-left#dark",
     "custom/gap",
@@ -11,9 +12,28 @@
     "bluetooth",
     "custom/cap-left",
     "battery",
-    "wireplumber",
-    "custom/cap-left-end"
+    "group/audio",
+    "custom/cap-left-end",
+    "hyprland/submap"
   ],
+  "modules-right": [
+    "privacy",
+    "custom/gap-right#dark",
+    "network#right",
+    "custom/cap-right#dark",
+    "clock#clock2",
+    "custom/cap-right",
+    "clock"
+  ],
+  "group/audio": {
+    "orientation": "horizontal",
+    "modules": [
+      "wireplumber"
+    ]
+  },
+  "mpris": {
+    "format": "{title} - {artist} player - {player}"
+  },
   "wireplumber": {
     "format": "{icon} {volume}%",
     "format-muted": "",
@@ -24,22 +44,33 @@
       ""
     ]
   },
-  "modules-center": [
-    ""
-  ],
-  "modules-right": [
-    "custom/gap-right#dark",
-    "network#right",
-    "custom/cap-right#dark",
-    "clock#clock2",
-    "custom/cap-right",
-    "clock"
-  ],
+  "privacy": {
+    "modules": [
+      {
+        "type": "screenshare",
+        "tooltip": true,
+        "tooltip-icon-size": 24
+      },
+      {
+        "type": "audio-out",
+        "tooltip": true,
+        "tooltip-icon-size": 24
+      },
+      {
+        "type": "audio-in",
+        "tooltip": true,
+        "tooltip-icon-size": 24
+      }
+    ]
+  },
   "backlight/slider": {
     "min": 0,
     "max": 100,
     "orientation": "horizontal",
     "device": "intel_backlight"
+  },
+  "user": {
+    "format": "~/zsh::{work_M}"
   },
   "battery": {
     "bat": "BAT0",
@@ -61,10 +92,6 @@
       "",
       ""
     ]
-  },
-  "user": {
-    "format": "{work_M}",
-    "interval": 30
   },
   "group/submap": {
     "orientation": "horizontal",
@@ -98,7 +125,7 @@
   },
   "hyprland/workspaces": {
     "active-only": true,
-    "format": "{id}"
+    "format": "[{id}]"
   },
   "hyprland/window": {
     "format": "{title}"
@@ -180,6 +207,10 @@
     "format": ""
   },
   "custom/cap-left#dark": {
+    "tooltip": false,
+    "format": ""
+  },
+  "custom/cap-left#lighterblue": {
     "tooltip": false,
     "format": ""
   },
