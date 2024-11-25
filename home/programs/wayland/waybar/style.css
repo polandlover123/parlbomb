@@ -10,8 +10,8 @@
 }
 
 #waybar {
-  background: #262626;
-  color: #262626;
+  background: #161616;
+  color: #161616;
 }
 
 #backlight-slider {
@@ -38,7 +38,7 @@
 #backlight-slider highlight {
   min-width: 10px;
   border-radius: 5px;
-  background-color: #ffaf5f;
+  background-color: #78a9ff;
 }
 
 #custom-cap-left {
@@ -46,23 +46,28 @@
   background-color: #3a3a3a;
 }
 
+#custom-cap-left-end {
+  color: #3a3a3a;
+  background-color: #161616;
+}
+
 #custom-gap {
   color: #262626;
-  background-color: #ffaf5f;
+  background-color: #78a9ff;
 }
 
 #custom-gap.endcap {
-  color: #ffaf5f;
+  color: #78a9ff;
   background-color: #262626;
 }
 
 #custom-gap-right {
   color: #262626;
-  background-color: #ffaf5f;
+  background-color: #be95ff;
 }
 
 #custom-gap-right.dark {
-  color: #ffaf5f;
+  color: #be95ff;
   background-color: #262626;
 }
 
@@ -73,36 +78,30 @@
 
 #custom-cap-left.dark-orange {
   color: #3a3a3a;
-  background-color: #ffaf5f;
+  background-color: #78a9ff;
 }
 
 #custom-cap-right {
-  color: #ffaf5f;
+  color: #be95ff;
   background: #3a3a3a;
 }
 
 #custom-cap-right.dark {
   color: #3a3a3a;
-  background: #ffaf5f;
-}
-
-#idle_inhibitor {
-  background: @bgcolor;
-  padding-left: 20px;
-  padding-right: 10px;
+  background: #be95ff;
 }
 
 #custom-weather,
 #custom-logo {
   padding-left: 10px;
   color: #262626;
-  background: #ffaf5f;
+  background: #78a9ff;
 }
 
 #custom-power {
   padding-left: 10px;
   color: #262626;
-  background: #ffaf5f;
+  background: #78a9ff;
   padding-right: 10px;
 }
 
@@ -110,7 +109,7 @@
   padding-left: 10px;
   padding-right: 10px;
   color: #262626;
-  background: #ffaf5f;
+  background: #78a9ff;
 }
 
 #temperature,
@@ -119,28 +118,28 @@
 #custom-vpn,
 #disk,
 #battery {
-  color: #ffaf5f;
+  color: #82cfff;
   background: #3a3a3a;
   padding-left: 10px;
   padding-right: 10px;
 }
 
 #wireplumber {
-  color: #ffaf5f;
+  color: #be95ff;
   background: #3a3a3a;
   padding-left: 10px;
   padding-right: 10px;
 }
 
 #window {
-  color: #ffaf5f;
+  color: #78a9ff;
   background: #3a3a3a;
   padding-left: 10px;
   padding-right: 10px;
 }
 
 #workspaces {
-  color: #ffaf5f;
+  color: #78a9ff;
   background: #3a3a3a;
 
   padding-left: 10px;
@@ -148,7 +147,7 @@
 }
 
 #clock {
-  background: #ffaf5f;
+  background: #be95ff;
   color: #262626;
   padding-left: 10px;
   padding-right: 10px;
@@ -156,20 +155,27 @@
 
 #clock.clock2 {
   background: #3a3a3a;
-  color: #ffaf5f;
+  color: #be95ff;
   padding-right: 10px;
   padding-left: 10px;
 }
 
 #network {
-  background: #ffaf5f;
+  background: #78a9ff;
+  color: #262626;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#network.right {
+  background: #be95ff;
   color: #262626;
   padding-left: 10px;
   padding-right: 10px;
 }
 
 #bluetooth {
-  background: #ffaf5f;
+  background: #78a9ff;
   color: #262626;
   padding-left: 10px;
   padding-right: 10px;
@@ -177,7 +183,7 @@
 
 #user {
   color: #262626;
-  background-color: #ffaf5f;
+  background-color: #78a9ff;
 }
 
 #submap {
@@ -185,12 +191,12 @@
   color: #393939;
 }
 
-#submap.vim {
-  background-color: #ff7eb6;
-  color: #393939;
+#submap.INSERT {
+  background-color: #161616;
+  color: #be95ff;
 }
 
 group-submap {
-  background-color: #ff7eb6;
-  color: #393939;
+  background-color: #161616;
+  color: #be95ff;
 }

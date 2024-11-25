@@ -12,7 +12,7 @@
     "custom/cap-left",
     "battery",
     "wireplumber",
-    "custom/cap-left#dark"
+    "custom/cap-left-end"
   ],
   "wireplumber": {
     "format": "{icon} {volume}%",
@@ -184,6 +184,10 @@
     "format": ""
   },
   "custom/cap-left#dark-orange": {
+    "tooltip": false,
+    "format": ""
+  },
+  "custom/cap-left-end": {
     "tooltip": false,
     "format": ""
   },

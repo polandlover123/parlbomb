@@ -16,5 +16,6 @@
   # environment.
   home.packages = with pkgs; [
     networkmanagerapplet
+    obsidian
   ];
 }
