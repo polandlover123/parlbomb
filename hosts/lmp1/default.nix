@@ -21,14 +21,14 @@
       };
     };
   };
-  networking.hostName = "pessima";
+  networking.hostName = "lmp1";
   services = {
     logind.extraConfig = ''
       HandlePowerKey=suspend
     '';
   };
   home-manager = {
-    users."parliamentbomber" = import ../../home/homes/pessima;
+    users."parliamentbomber" = import ../../home/homes/lmp1;
     extraSpecialArgs = {
       inherit inputs;
       inherit self;

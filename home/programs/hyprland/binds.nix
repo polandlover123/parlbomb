@@ -1,4 +1,4 @@
-{pkgs, ...}: let
+let
   workspaces = builtins.concatLists (builtins.genList (x: let
       ws = let c = (x + 1) / 10; in builtins.toString (x + 1 - (c * 10));
     in [
@@ -9,19 +9,44 @@
 in {
   wayland.windowManager.hyprland = {
     extraConfig = ''
+      # submap 1
       bind = SUPERSHIFT, space, submap, INSERT
       submap = INSERT
       bind = SHIFT, d, togglesplit
-      bind = SHIFT, d, submap, reset
-      bind = SHIFT, s, exec,
-      bind = Shift, s, submap, reset
       bind = SHIFT, e, exec, nautilus -w
-      bind = SHIFT, e, submap, reset
       bind = , escape, submap, reset
       bind = SHIFT, q, exec, firefox
-      bind = SHIFT, q, submap, reset
+      bind = SHIFT, o, exec, obsidian
+      bind = SHIFT, s, exec, spotify
+      bind = SHIFT, a, exec, alacritty
       bind = SHIFT, z, exec, google-chrome-stable --new-window
-      bind = SHIFT, z, submap, reset
+      bind = shift, catchall, submap, reset
+      bind = SUPER, catchall, submap, reset
+      submap = reset
+
+      # submap 2
+      bind = SUPERSHIFT, return, submap, VISUAL
+      submap = VISUAL
+      binde = super, l, resizeactive, 20 0
+      binde = super, h, resizeactive, -20 0
+      binde = super, k, resizeactive, 0 -20
+      binde = super, j, resizeactive, 0 20
+
+      bind = SHIFT, r, exec, alacritty -e nvim
+      bind = , escape, submap, reset
+      bind = SHIFT, catchall, submap, reset
+      bind = SUPER, catchall, submap, reset
+      submap = reset
+
+      # submap 3
+      bind = SUPERSHIFT, tab, submap, DEBUG
+      submap = DEBUG
+      # binds here
+      bind = SUPERSHIFT, r, forcerendererreload
+      # escape clauses
+      bind = , escape, submap, reset
+      bind = SHIFT, catchall, submap, reset
+      bind = SUPER, catchall, submap, reset
       submap = reset
     '';
     settings = {
@@ -35,8 +60,8 @@ in {
           "SUPER SHIFT, Z, changegroupactive, f"
           "SUPER, Z, changegroupactive, b"
           # window focusing
-          "SUPER, mouse_down, focusmonitor, -1"
-          "SUPER, mouse_up, focusmonitor, +1"
+          "SUPER, mouse_down, workspace, -1"
+          "SUPER, mouse_up, workspace, +1"
           "SUPER SHIFT, tab, focusmonitor, next"
           # window mgmt
           "SUPER, Q, killactive"

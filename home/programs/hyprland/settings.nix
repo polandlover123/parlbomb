@@ -20,6 +20,10 @@
       }
     '';
     settings = {
+      binds = {
+        workspace_center_on = 1;
+        scroll_event_delay = 15;
+      };
       monitor =
         lib.mapAttrsToList (name: m: let
           resolution = "${toString m.width}x${toString m.height}@${
@@ -35,6 +39,10 @@
       debug = {disable_logs = false;};
       cursor = {no_hardware_cursors = true;};
       general = {
+        snap = {
+          enabled = true;
+          border_overlap = true;
+        };
         resize_on_border = true;
         hover_icon_on_border = false;
         gaps_in = 0;
@@ -43,6 +51,8 @@
         layout = "dwindle";
       };
       input = {
+        repeat_rate = 75;
+        repeat_delay = 200;
         accel_profile = "flat";
         kb_layout = "us";
         touchpad = {
@@ -80,6 +90,7 @@
       xwayland = {force_zero_scaling = true;};
       render = {explicit_sync = true;};
       misc = {
+        allow_session_lock_restore = true;
         vrr = 1;
         close_special_on_empty = true;
         disable_hyprland_logo = 2;

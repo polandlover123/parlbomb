@@ -215,6 +215,11 @@
   color: #be95ff;
 }
 
+#submap.DEBUG {
+  background-color: #161616;
+  color: #42be65;
+}
+
 #privacy {
   background-color: #262626;
   color: #be95ff;

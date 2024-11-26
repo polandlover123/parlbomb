@@ -48,9 +48,9 @@
         specialArgs = {inherit self inputs;};
         modules = [./hosts/digglydoo];
       };
-      pessima = nixpkgs.lib.nixosSystem {
+      lmp1 = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit self inputs;};
-        modules = [./hosts/pessima];
+        modules = [./hosts/lmp1];
       };
     };
   };

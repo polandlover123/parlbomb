@@ -2,7 +2,7 @@
   imports = [
     ./fonts.nix
     ./home-manager.nix
-    ./steam.nix
+    # ./steam.nix
     ./hyprland.nix
     ./qt.nix
     ./xdg.nix
