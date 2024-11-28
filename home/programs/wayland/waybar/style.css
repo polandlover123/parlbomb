@@ -201,22 +201,34 @@
 }
 
 #submap {
-  background-color: #161616;
+  margin-top: 5px;
   color: #78a9ff;
+  font-family:
+    Monaspace Radon,
+    monospace;
 }
 
 #submap.INSERT {
   background-color: #161616;
+  font-family:
+    Monaspace Radon,
+    monospace;
   color: #ff7eb6;
 }
 
 #submap.VISUAL {
   background-color: #161616;
+  font-family:
+    Monaspace Radon,
+    monospace;
   color: #be95ff;
 }
 
 #submap.DEBUG {
   background-color: #161616;
+  font-family:
+    Monaspace Radon,
+    monospace;
   color: #42be65;
 }
 

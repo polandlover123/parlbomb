@@ -1,8 +1,4 @@
-{
-  pkgs,
-  inputs,
-  ...
-}: {
+{pkgs, ...}: {
   environment.systemPackages = with pkgs; [font-manager];
   fonts = {
     fontDir.enable = true;
@@ -15,7 +11,6 @@
       source-han-sans-japanese
       source-han-serif-japanese
       lexend
-      torus
       ipafont
       source-code-pro
       monaspace
@@ -23,7 +18,6 @@
       #mono
       jetbrains-mono
 
-      #inputs.self.packages.${pkgs.system}.torus-pro
       (pkgs.nerdfonts.override {fonts = ["JetBrainsMono"];})
     ];
     fontconfig = {

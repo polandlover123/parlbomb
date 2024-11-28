@@ -18,7 +18,7 @@
         text = "$TIME";
         color = "rgba(222, 222, 222, 1.0)";
         font_size = 50;
-        font_family = "Torus Pro";
+        font_family = "JetBrains Mono";
         position = "0, 50";
         halign = "center";
         valign = "center";

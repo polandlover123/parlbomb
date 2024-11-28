@@ -1,6 +1,5 @@
 {self, ...}: {
   nixpkgs = {
-    overlays = [(import ../../overlays/default.nix)];
     config.allowUnfree = true;
     config.allowUnfreePredicate = _: true;
 

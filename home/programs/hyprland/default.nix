@@ -15,8 +15,9 @@
   wayland.windowManager.hyprland = {
     enable = true;
     package = inputs.hyprland.packages.${pkgs.system}.default;
-    plugins = [
-      inputs.split-monitor-workspaces.packages.${pkgs.system}.split-monitor-workspaces
+    plugins = with pkgs; [
+      hyprlandPlugins.hyprsplit
+      hyprlandPlugins.hyprexpo
       # inputs.hyprland-plugins.packages.${pkgs.system}.hyprexpo
     ];
     # systemd = {enable = true;};

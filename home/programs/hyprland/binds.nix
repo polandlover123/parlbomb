@@ -2,8 +2,8 @@ let
   workspaces = builtins.concatLists (builtins.genList (x: let
       ws = let c = (x + 1) / 10; in builtins.toString (x + 1 - (c * 10));
     in [
-      "SUPER, ${ws}, split-workspace, ${toString (x + 1)}"
-      "SUPER SHIFT, ${ws}, split-movetoworkspace, ${toString (x + 1)}"
+      "SUPER, ${ws}, split:workspace, ${toString (x + 1)}"
+      "SUPER SHIFT, ${ws}, split:movetoworkspace, ${toString (x + 1)}"
     ])
     10);
 in {
@@ -12,6 +12,7 @@ in {
       # submap 1
       bind = SUPERSHIFT, space, submap, INSERT
       submap = INSERT
+      bind = SUPERSHIFT, space, submap, rese
       bind = SHIFT, d, togglesplit
       bind = SHIFT, e, exec, nautilus -w
       bind = , escape, submap, reset
@@ -20,6 +21,7 @@ in {
       bind = SHIFT, s, exec, spotify
       bind = SHIFT, a, exec, alacritty
       bind = SHIFT, z, exec, google-chrome-stable --new-window
+      bind = Shift, c, exec, code
       bind = shift, catchall, submap, reset
       bind = SUPER, catchall, submap, reset
       submap = reset
@@ -27,10 +29,18 @@ in {
       # submap 2
       bind = SUPERSHIFT, return, submap, VISUAL
       submap = VISUAL
+      bind = SUPERSHIFT, return, submap, reset
       binde = super, l, resizeactive, 20 0
       binde = super, h, resizeactive, -20 0
       binde = super, k, resizeactive, 0 -20
       binde = super, j, resizeactive, 0 20
+
+      binde = supershift, l, moveactive, 20 0
+      binde = supershift, h, moveactive, -20 0
+      binde = supershift, k, moveactive, 0 -20
+      binde = supershift, j, moveactive, 0 20
+
+
 
       bind = SHIFT, r, exec, alacritty -e nvim
       bind = , escape, submap, reset
@@ -41,6 +51,7 @@ in {
       # submap 3
       bind = SUPERSHIFT, tab, submap, DEBUG
       submap = DEBUG
+      bind = SUPERSHIFT, tab, submap, reset
       # binds here
       bind = SUPERSHIFT, r, forcerendererreload
       # escape clauses
