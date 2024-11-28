@@ -15,10 +15,8 @@
   wayland.windowManager.hyprland = {
     enable = true;
     package = inputs.hyprland.packages.${pkgs.system}.default;
-    plugins = with pkgs; [
-      hyprlandPlugins.hyprsplit
-      hyprlandPlugins.hyprexpo
-      # inputs.hyprland-plugins.packages.${pkgs.system}.hyprexpo
+    plugins = [
+      inputs.hyprsplit.packages.${pkgs.system}.hyprsplit
     ];
     # systemd = {enable = true;};
   };
