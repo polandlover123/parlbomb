@@ -1,4 +1,8 @@
 {pkgs, ...}: {
+  imports = [
+    ./pipewire.nix
+    ./location.nix
+  ];
   services = {
     gnome = {
       gnome-keyring.enable = true;

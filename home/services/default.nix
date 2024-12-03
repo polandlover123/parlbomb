@@ -1,1 +1,1 @@
-{imports = [./playerctl ./udiskie ./notification ./swayosd];}
+{imports = [./playerctl ./udiskie ./wlsunset ./notification ./swayosd];}

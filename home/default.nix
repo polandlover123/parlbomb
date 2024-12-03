@@ -8,8 +8,8 @@
   ];
   home = {
     stateVersion = "24.05"; # Please read the comment before changing.
-    username = "parliamentbomber";
-    homeDirectory = "/home/parliamentbomber";
+    username = "admin";
+    homeDirectory = "/home/admin";
     packages = with pkgs; [
       google-chrome
       webcord-vencord

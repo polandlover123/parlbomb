@@ -1,6 +1,8 @@
 {config, ...}: {
   wayland.windowManager.hyprland.settings = {
     windowrulev2 = [
+      "size 50% 55%, class:^(Alacritty)$,floating: 1"
+      "center, class:^(Alacritty)$, floating: 1"
       "float, title:^(Picture-in-Picture)$"
       "pin, title:^(Picture-in-Picture)$"
       "float, class:^(imv)$"
@@ -12,7 +14,8 @@
       "stayfocused, title:^()$,class:^(steam)$"
       "minsize 1 1, title:^()$,class:^(steam)$"
       "float,class:(clipse)" # ensure you have a floating window class set if you want this behaviour
-      "size 622 652,class:(clipse)" # set the size of the window as necessary
+      "size 422 452,class:(clipse)" # set the size of the window as necessary
+      "pin, class:(clipse)"
       "stayfocused, class:(Anyrun)"
     ];
     layerrule = let

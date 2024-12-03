@@ -5,6 +5,7 @@
 }: {
   imports = [
     ./execonce.nix
+    ./wallpaper.nix
     ./settings.nix
     ./rules.nix
     ./binds.nix
@@ -16,6 +17,7 @@
     enable = true;
     package = inputs.hyprland.packages.${pkgs.system}.default;
     plugins = [
+      inputs.hyprspace.packages.${pkgs.system}.Hyprspace
       inputs.hyprsplit.packages.${pkgs.system}.hyprsplit
     ];
     # systemd = {enable = true;};

@@ -16,7 +16,7 @@
   services.flatpak.enable = true;
   services = {fstrim.enable = true;};
   home-manager = {
-    users."parliamentbomber" = import ../../home/homes/digglydoo;
+    users."admin" = import ../../home/homes/digglydoo;
     extraSpecialArgs = {
       inherit inputs;
       inherit self;

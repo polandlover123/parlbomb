@@ -1,63 +1,79 @@
-let
+{pkgs, ...}: let
   workspaces = builtins.concatLists (builtins.genList (x: let
       ws = let c = (x + 1) / 10; in builtins.toString (x + 1 - (c * 10));
     in [
-      "SUPER, ${ws}, split-workspace, ${toString (x + 1)}"
-      "SUPER SHIFT, ${ws}, split-movetoworkspace, ${toString (x + 1)}"
+      "SUPER, ${ws}, split:workspace, ${toString (x + 1)}"
+      "SUPER SHIFT, ${ws}, split:movetoworkspace, ${toString (x + 1)}"
     ])
     10);
 in {
+  home.packages = with pkgs; [
+    brightnessctl
+    overskride
+    pavucontrol
+    wlr-which-key
+  ];
   wayland.windowManager.hyprland = {
     extraConfig = ''
+      #-----------------------------------------
       # submap 1
       bind = SUPERSHIFT, space, submap, INSERT
+      bind = SUPERSHIFT, space, exec, wlr-which-key
       submap = INSERT
-      bind = SUPERSHIFT, space, submap, rese
+      bind = SUPERSHIFT, space, submap, reset
+      bind = SHIFT, g, submap, INSERT2
+      bind = SHIFT, v, submap, COMMAND
       bind = SHIFT, d, togglesplit
       bind = SHIFT, e, exec, nautilus -w
-      bind = , escape, submap, reset
+      bind = SHIFT, r, exec, alacritty -e nvim ~/parlbomb
       bind = SHIFT, q, exec, firefox
       bind = SHIFT, o, exec, obsidian
       bind = SHIFT, s, exec, spotify
       bind = SHIFT, a, exec, alacritty
+      bind = SHIFT, p, exec, pavucontrol
       bind = SHIFT, z, exec, google-chrome-stable --new-window
+      bind = shift, b, exec, overskride
+
       bind = Shift, c, exec, code
       bind = shift, catchall, submap, reset
       bind = SUPER, catchall, submap, reset
+      bind = , escape, submap, reset
+
       submap = reset
 
-      # submap 2
+      #-----------------------------------------
+      #command mode
+      submap = COMMAND
+      bind = SUPERSHIFT, space, submap, reset
+      bind = shift, d, exec, kitty
+      bind = SHIFT, g, submap, INSERT2
+      bind = shift, catchall, submap, reset
+      bind = SUPER, catchall, submap, reset
+      bind = , escape, submap, reset
+      submap = reset
+
+      #-----------------------------------------
+      # insert2
+      submap = INSERT2
+      bind = SUPERSHIFT, space, submap, reset
+      bind = shift, d, exec, kitty
+      bind = shift, e, exec, alacritty -e man configuration.nix
+      bind = shift, r, exec, alacritty -e man home-configuration.nix
+      bind = shift, catchall, submap, reset
+      bind = SUPER, catchall, submap, reset
+      bind = , escape, submap, reset
+      submap = reset
+      #-----------------------------------------
+
+      # visual
       bind = SUPERSHIFT, return, submap, VISUAL
       submap = VISUAL
-      bind = SUPERSHIFT, return, submap, reset
-      binde = super, l, resizeactive, 20 0
-      binde = super, h, resizeactive, -20 0
-      binde = super, k, resizeactive, 0 -20
-      binde = super, j, resizeactive, 0 20
-
-      binde = supershift, l, moveactive, 20 0
-      binde = supershift, h, moveactive, -20 0
-      binde = supershift, k, moveactive, 0 -20
-      binde = supershift, j, moveactive, 0 20
-
-
-
-      bind = SHIFT, r, exec, alacritty -e nvim
-      bind = , escape, submap, reset
-      bind = SHIFT, catchall, submap, reset
+      bind = SUPERSHIFT, space, submap, reset
+      bind = shift, d, togglesplit
+      bind = shift, catchall, submap, reset
       bind = SUPER, catchall, submap, reset
-      submap = reset
-
-      # submap 3
-      bind = SUPERSHIFT, tab, submap, DEBUG
-      submap = DEBUG
-      bind = SUPERSHIFT, tab, submap, reset
-      # binds here
-      bind = SUPERSHIFT, r, forcerendererreload
-      # escape clauses
       bind = , escape, submap, reset
-      bind = SHIFT, catchall, submap, reset
-      bind = SUPER, catchall, submap, reset
+
       submap = reset
     '';
     settings = {
@@ -66,6 +82,7 @@ in {
       bind =
         [
           # grouping
+          "alt, tab, swapnext"
           "SUPER, X, moveoutofgroup"
           "SUPER CONTROL,Z, togglegroup,"
           "SUPER SHIFT, Z, changegroupactive, f"
@@ -112,13 +129,18 @@ in {
           ", XF86AudioMute,exec, swayosd-client --output-volume mute-toggle "
           ",XF86AudioNext, exec, playerctl next"
           ", XF86AudioPrev, exec, playerctl previous"
+
           # "SUPERSHIFT, A, hyprexpo:expo,toggle"
         ]
         ++ workspaces;
       binde = [
         ",XF86AudioRaiseVolume, exec, swayosd-client --output-volume raise"
         ",XF86AudioLowerVolume, exec, swayosd-client --output-volume lower"
-        # ",XF86MonBrightnessUp, exec, brightnessctl s +5"
+        ",XF86MonBrightnessUp, exec, brightnessctl s +5%"
+        ",XF86MonBrightnessDown, exec, brightnessctl s 5%-"
+      ];
+      bindl = [
+        ", switch:[Intel HID switches], exec, alacritty"
       ];
     };
   };

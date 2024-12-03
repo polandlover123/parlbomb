@@ -10,13 +10,13 @@
       };
 
       background = {
-        color = "rgb(1C1430)";
+        color = "rgb(161616)";
         # blur_passes = 2;
         brightness = 0.5;
       };
       label = {
         text = "$TIME";
-        color = "rgba(222, 222, 222, 1.0)";
+        color = "rgb(be95ff)";
         font_size = 50;
         font_family = "JetBrains Mono";
         position = "0, 50";
@@ -27,13 +27,13 @@
         size = "50, 50";
         dots_size = 0.33;
         dots_spacing = 0.15;
-        outer_color = "rgba(25, 20, 20, 0)";
-        inner_color = "rgba(25, 20, 20, 0)";
-        font_color = "rgba(222, 222, 222, 1.0)";
+        outer_color = "rgb(262626)";
+        inner_color = "rgb(3a3a3a)";
+        font_color = "rgb(78a9ff)";
         placeholder_text = "wqdcywqdmcgwqgdymcqw";
         hide_input = false;
-        fail_color = "rgba(255, 0, 0, 1.0)";
-        capslock_color = "rgba(0, 255, 255, 1.0)";
+        fail_color = "rgb(ff7eb6)";
+        capslock_color = "rgb(ff7eb6)";
         halign = "center";
         fade_on_empty = false;
         valign = "center";

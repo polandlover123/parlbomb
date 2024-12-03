@@ -201,7 +201,7 @@
 }
 
 #submap {
-  margin-top: 5px;
+  margin-top: 2.5px;
   color: #78a9ff;
   font-family:
     Monaspace Radon,
@@ -214,6 +214,14 @@
     Monaspace Radon,
     monospace;
   color: #ff7eb6;
+}
+
+#submap.INSERT2 {
+  background-color: #161616;
+  font-family:
+    Monaspace Radon,
+    monospace;
+  color: #08bdba;
 }
 
 #submap.VISUAL {
@@ -230,6 +238,14 @@
     Monaspace Radon,
     monospace;
   color: #42be65;
+}
+
+#submap.COMMAND {
+  background-color: #161616;
+  font-family:
+    Monaspace Radon,
+    monospace;
+  color: #3ddbd9;
 }
 
 #privacy {

@@ -1,5 +1,5 @@
 {pkgs, ...}: {
-  users.users.parliamentbomber = {
+  users.users.admin = {
     isNormalUser = true;
     shell = pkgs.zsh;
     extraGroups = ["input" "libvirtd" "networkmanager" "video" "wheel"];

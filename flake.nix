@@ -33,6 +33,14 @@
       url = "github:shezdy/hyprsplit";
       inputs.hyprland.follows = "hyprland";
     };
+    hyprgrass = {
+      url = "github:horriblename/hyprgrass";
+      inputs.hyprland.follows = "hyprland";
+    };
+    hyprspace = {
+      url = "github:kzdkm/hyprspace";
+      inputs.hyprland.follows = "hyprland";
+    };
   };
 
   outputs = {

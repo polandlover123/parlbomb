@@ -16,7 +16,7 @@
     vt = 2;
     settings = {
       default_session = {
-        command = "${pkgs.greetd.tuigreet}/bin/tuigreet --cmd Hyprland";
+        command = "${pkgs.greetd.tuigreet}/bin/tuigreet --remember --cmd Hyprland";
         user = "greeter";
       };
     };
@@ -26,9 +26,22 @@
     logind.extraConfig = ''
       HandlePowerKey=suspend
     '';
+    auto-cpufreq = {
+      enable = true;
+      settings = {
+        battery = {
+          governor = "powersave";
+          turbo = "never";
+        };
+        charger = {
+          governor = "performance";
+          turbo = "auto";
+        };
+      };
+    };
   };
   home-manager = {
-    users."parliamentbomber" = import ../../home/homes/lmp1;
+    users."admin" = import ../../home/homes/lmp1;
     extraSpecialArgs = {
       inherit inputs;
       inherit self;

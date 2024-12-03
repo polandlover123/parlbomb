@@ -63,7 +63,10 @@
         };
         sensitivity = 0;
       };
-      gestures = {workspace_swipe = true;};
+      gestures = {
+        workspace_swipe_cancel_ratio = 0.15;
+        workspace_swipe = true;
+      };
       group = {
         groupbar = {
           "col.active" = "rgb(FFAF5F)";
