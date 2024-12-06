@@ -1,33 +1,63 @@
 {
-  services.mako = {
+  services.swaync = {
     enable = true;
-    maxVisible = -1;
-    defaultTimeout = 1500;
-    anchor = "top-right";
-    backgroundColor = "#161616";
+    style = builtins.readFile ./style.css;
+    settings = {
+      positionX = "right";
+      positionY = "top";
 
-    borderColor = "#ffffff";
-    borderSize = 1;
-    borderRadius = 0;
-    height = 100;
+      layer = "overlay";
+      layer-shell = true;
+      cssPriority = "application";
 
-    margin = "50,0,0,0";
-    maxIconSize = 128;
-    padding = "12";
-    width = 350;
-    layer = "overlay";
-    font = "Monaspace Radon";
-    format = "<span foreground='#be95ff' size='14000' weight='bold'>%s</span>";
-    extraConfig = ''
-      on-button-left=invoke-default-action
-      text-alignment=center
+      control-center-layer = "top";
+      control-center-width = 400;
+      control-center-height = 1600;
+      control-center-margin-top = 0;
+      control-center-margin-bottom = 0;
+      control-center-margin-right = 0;
+      control-center-margin-left = 0;
 
-      [urgency=high]
-      text-color=#ff7eb6
+      notification-window-width = 800;
+      notification-2fa-action = true;
+      notification-inline-replies = false;
+      notification-icon-size = 64;
+      notification-body-image-height = 100;
+      notification-body-image-width = 200;
 
-      [urgency=critical]
-      text-color=#ee5396
-      default-timeout=10000
-    '';
+      keyboard-shortcuts = true;
+      image-visibility = "when-available";
+      transition-time = 100;
+
+      widgets = [
+        "inhibitors"
+        "dnd"
+        "mpris"
+        "notifications"
+      ];
+      widget-config = {
+        inhibitors = {
+          text = "Inhibitors";
+          button-text = "Clear All";
+          clear-all-button = true;
+        };
+        title = {
+          text = "Notifications";
+          clear-all-button = true;
+          button-text = "Clear All";
+        };
+        dnd = {
+          text = "Do Not Disturb";
+        };
+        label = {
+          max-lines = 5;
+          text = "Label Text";
+        };
+        mpris = {
+          image-size = 96;
+          blur = true;
+        };
+      };
+    };
   };
 }

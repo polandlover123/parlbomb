@@ -50,6 +50,7 @@
       sshAgentAuth.enable = true;
       services = {
         hyprlock.text = "auth include login";
+        greetd.enableGnomeKeyring = true;
         login = {
           enableGnomeKeyring = true;
         };

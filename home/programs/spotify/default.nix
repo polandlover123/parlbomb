@@ -9,6 +9,6 @@
   in {
     enable = true;
     theme = spicePkgs.themes.spotifyNoPremium;
-    enabledExtensions = with spicePkgs.extensions; [adblock shuffle];
+    enabledExtensions = with spicePkgs.extensions; [adblock fullAlbumDate shuffle];
   };
 }

@@ -248,6 +248,14 @@
   color: #3ddbd9;
 }
 
+#submap.WINDOW {
+  background-color: #161616;
+  font-family:
+    Monaspace Radon,
+    monospace;
+  color: #33b1ff;
+}
+
 #privacy {
   background-color: #262626;
   color: #be95ff;

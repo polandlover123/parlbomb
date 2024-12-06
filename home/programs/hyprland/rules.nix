@@ -17,6 +17,11 @@
       "size 422 452,class:(clipse)" # set the size of the window as necessary
       "pin, class:(clipse)"
       "stayfocused, class:(Anyrun)"
+      "rounding 0, floating:0, onworkspace:w[t1]"
+      "bordersize 0, floating:0, onworkspace:w[tg1]"
+      "rounding 0, floating:0, onworkspace:w[tg1]"
+      "bordersize 0, floating:0, onworkspace:f[1]"
+      "rounding 0, floating:0, onworkspace:f[1]"
     ];
     layerrule = let
       layers = "^(anyrun|gtk-layer-shell|swayosd)$";

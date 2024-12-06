@@ -17,6 +17,7 @@
           animation = borderangle, 1, 8, default
           animation = fade, 1, 7, default
           animation = workspaces, 1, 6, default, slide
+        first_launch_animation = false;
       }
     '';
     settings = {
@@ -39,14 +40,16 @@
       debug = {disable_logs = false;};
       cursor = {no_hardware_cursors = true;};
       general = {
+        resize_corner = 3;
         snap = {
           enabled = true;
           border_overlap = true;
         };
         resize_on_border = true;
+        extend_border_grab_area = 30;
         hover_icon_on_border = false;
-        gaps_in = 0;
-        gaps_out = 0;
+        gaps_in = 5;
+        gaps_out = 10;
         border_size = 0;
         layout = "dwindle";
       };
@@ -77,10 +80,16 @@
         };
       };
       decoration = {
+        shadow = {
+          enabled = true;
+          range = 4;
+          render_power = 4;
+          color = "rgb(161616)";
+        };
         rounding = 0;
         blur = {
-          passes = 2;
-          size = 2;
+          passes = 3;
+          size = 10;
           xray = true;
           special = true;
         };

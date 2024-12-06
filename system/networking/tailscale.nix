@@ -1,8 +1,10 @@
 {
-  networking.firewall = {
-    trustedInterfaces = ["tailscale0"];
-    # required to connect to Tailscale exit nodes
-    checkReversePath = "loose";
+  networking = {
+    firewall = {
+      trustedInterfaces = ["tailscale0"];
+      # required to connect to Tailscale exit nodes
+      checkReversePath = "loose";
+    };
   };
 
   # inter-machine VPN

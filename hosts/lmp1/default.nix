@@ -11,6 +11,7 @@
     inputs.home-manager.nixosModules.default
   ];
   # services = {displayManager.ly = {enable = true;};};
+  hardware.sensor.iio.enable = true;
   services.greetd = {
     enable = true;
     vt = 2;
