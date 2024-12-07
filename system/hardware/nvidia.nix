@@ -22,7 +22,7 @@
       open = true;
       powerManagement.enable = true;
       modesetting.enable = true;
-      package = config.boot.kernelPackages.nvidiaPackages.stable;
+      package = config.boot.kernelPackages.nvidiaPackages.beta; # not evaluating nixpkgs again so i pushed to beta
       nvidiaSettings = true;
     };
     graphics = {

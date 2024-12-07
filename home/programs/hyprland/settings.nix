@@ -6,7 +6,6 @@
 }: {
   wayland.windowManager.hyprland = {
     enable = true;
-    # plugins = [ inputs.hyprspace.packages.${pkgs.system}.Hyprspace ];
     extraConfig = ''
       animations {
         enabled = false
