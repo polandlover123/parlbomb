@@ -17,7 +17,6 @@
     "hyprland/submap"
   ],
   "modules-right": [
-    "privacy",
     "custom/gap-right#dark",
     "network#right",
     "custom/cap-right#dark",
@@ -42,25 +41,6 @@
       "",
       "",
       ""
-    ]
-  },
-  "privacy": {
-    "modules": [
-      {
-        "type": "screenshare",
-        "tooltip": true,
-        "tooltip-icon-size": 24
-      },
-      {
-        "type": "audio-out",
-        "tooltip": true,
-        "tooltip-icon-size": 24
-      },
-      {
-        "type": "audio-in",
-        "tooltip": true,
-        "tooltip-icon-size": 24
-      }
     ]
   },
   "backlight/slider": {

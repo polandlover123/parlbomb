@@ -18,6 +18,7 @@
       #mono
       jetbrains-mono
       nerd-fonts.jetbrains-mono
+      nerd-fonts.victor-mono
     ];
     fontconfig = {
       enable = true;
@@ -25,7 +26,7 @@
       hinting.enable = true;
       antialias = true;
       defaultFonts = {
-        monospace = ["Meslo LG M Regular Nerd Font Complete Mono"];
+        monospace = ["JetbrainsMono"];
         serif = ["Monaspace Xenon"];
         sansSerif = ["Monaspace Radon"];
       };

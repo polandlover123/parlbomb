@@ -2,10 +2,24 @@
   programs.nixvim = {
     extraPlugins = with pkgs.vimPlugins; [
       cheatsheet-nvim
+      nvim-window-picker
     ];
     plugins = {
-      lazygit = {
+      gitblame.enable = true;
+
+      codesnap = {
         enable = true;
+        settings = {
+          has_breadcrumbs = true;
+          breadcrumbs_separator = "/";
+          has_line_number = true;
+          mac_window_bar = false;
+          save_path = "~/Pictures/Screenshots/";
+          code_font_family = "Monaspace Radon";
+          bg_theme = "default";
+          title = "";
+          watermark = "";
+        };
       };
       precognition = {
         enable = true;
@@ -29,7 +43,6 @@
       tmux-navigator.enable = true;
       comment.enable = true;
       nvim-autopairs.enable = true;
-      friendly-snippets.enable = true;
       todo-comments.enable = true;
       treesitter-context.enable = true;
       treesitter = {

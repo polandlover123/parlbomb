@@ -5,7 +5,7 @@
   lib,
   ...
 }: {
-  imports = [inputs.nix-index-database.nixosModules.nix-index ./nh.nix ./nixpkgs.nix ./subs.nix];
+  imports = [inputs.nix-index-database.nixosModules.nix-index ./nh.nix ./docs.nix ./nixpkgs.nix ./subs.nix];
 
   # we need git for flakes
   programs.nix-index-database.comma.enable = true;

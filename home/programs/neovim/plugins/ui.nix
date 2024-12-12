@@ -20,12 +20,12 @@
       lualine = {
         enable = true;
         settings = {
-          options.disabled_filetypes.statusline = ["dashboard" "alpha" "chadtree"];
+          options.disabled_filetypes.statusline = ["dashboard" "alpha" "neo-tree"];
 
           alwaysDivideMiddle = true;
           globalstatus = true;
-          ignoreFocus = ["chadtree"];
-          extensions = ["fzf" "chadtree" "oil" "toggleterm"];
+          ignoreFocus = ["neo-tree"];
+          extensions = ["fzf" "oil" "toggleterm"];
           theme = "auto";
           componentSeparators = {
             left = "|";
@@ -53,41 +53,20 @@
       noice = {
         enable = true;
         settings = {
-          presets = {
-            command_palette = true;
-            inc_rename = true;
-            lsp_doc_border = true;
-            long_message_to_split = true;
+          lsp.override = {
+            "cmp.entry.get_documentation" = true;
+            "vim.lsp.util.convert_input_to_markdown_lines" = true;
+            "vim.lsp.util.stylize_markdown" = true;
           };
-
           views = {
-            popupmenu = {
-              backend = "cmp";
-            };
+            cmdline_popup.border.style = "single";
+            cmdline_popupmenu.border.style = "single";
           };
-
-          notify = {
-            enabled = true;
-          };
-
-          messages = {
-            enabled = true;
-          };
-
-          lsp = {
-            message = {
-              enabled = true;
-            };
-
-            progress = {
-              enabled = false;
-              view = "mini";
-            };
-          };
-
-          popupmenu = {
-            enabled = true;
-            backend = "nui";
+          presets = {
+            bottom_search = true;
+            command_palette = true;
+            long_message_to_split = true;
+            lsp_doc_border = false;
           };
         };
       };

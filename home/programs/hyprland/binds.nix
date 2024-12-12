@@ -11,7 +11,8 @@ in {
     brightnessctl
     overskride
     pavucontrol
-    wlr-which-key
+    iio-hyprland
+    jq
   ];
   wayland.windowManager.hyprland = {
     extraConfig = ''

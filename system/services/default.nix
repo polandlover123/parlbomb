@@ -9,6 +9,7 @@
       gnome-online-accounts.enable = true;
       sushi.enable = true;
     };
+    udev.packages = with pkgs; [gnome-settings-daemon];
     dbus = {
       packages = with pkgs; [dconf gcr gnome-settings-daemon udisks2];
       implementation = "broker";

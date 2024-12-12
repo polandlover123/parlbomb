@@ -103,7 +103,7 @@
       }
       {
         key = "<leader>E";
-        action = "<cmd>CHADopen<cr>";
+        action = "<cmd>Neotree<cr>";
         options.desc = "luh tree";
       }
 

@@ -1,7 +1,7 @@
 {
   programs.nixvim = {
     plugins = {
-      chadtree = {
+      neo-tree = {
         enable = true;
       };
       oil = {

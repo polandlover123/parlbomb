@@ -12,5 +12,10 @@
   home.packages = with pkgs; [
     nixd
   ];
-  programs.nixvim.enable = true;
+  programs.nixvim = {
+    enable = true;
+    viAlias = true;
+    vimAlias = true;
+    defaultEditor = true;
+  };
 }

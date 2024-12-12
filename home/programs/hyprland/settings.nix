@@ -102,7 +102,6 @@
       render = {explicit_sync = true;};
       misc = {
         allow_session_lock_restore = true;
-        vrr = 1;
         close_special_on_empty = true;
         disable_hyprland_logo = 2;
         disable_splash_rendering = false;

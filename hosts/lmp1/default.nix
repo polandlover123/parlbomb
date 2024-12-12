@@ -12,13 +12,19 @@
   ];
   # services = {displayManager.ly = {enable = true;};};
   hardware.sensor.iio.enable = true;
-  services.greetd = {
-    enable = true;
-    vt = 2;
-    settings = {
-      default_session = {
-        command = "${pkgs.greetd.tuigreet}/bin/tuigreet --remember --cmd Hyprland";
-        user = "greeter";
+  services = {
+    asusd = {
+      enable = true;
+      package = pkgs.asusctl;
+    };
+    greetd = {
+      enable = true;
+      vt = 2;
+      settings = {
+        default_session = {
+          command = "${pkgs.greetd.tuigreet}/bin/tuigreet --remember --cmd Hyprland";
+          user = "greeter";
+        };
       };
     };
   };

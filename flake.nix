@@ -8,6 +8,9 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     hyprland = {url = "git+https://github.com/hyprwm/hyprland?submodules=1";};
+    nixos-anyrun-options = {
+      url = "github:n3oney/anyrun-nixos-options";
+    };
     nh = {
       url = "github:viperml/nh";
       inputs.nixpkgs.follows = "nixpkgs";
