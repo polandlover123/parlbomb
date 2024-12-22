@@ -3,7 +3,7 @@
     extraModprobeConfig = ''
       options iwlwifi 11n_disable=8
     '';
-    kernelPackages = pkgs.pkgs.linuxPackages_testing;
+    kernelPackages = pkgs.linuxPackages_6_11;
     kernelModules = ["kvm-intel"];
     supportedFilesystems = ["ntfs"];
     loader = {

@@ -55,4 +55,9 @@
     };
     backupFileExtension = "hmbackup";
   };
+  # iphone backup
+  services.usbmuxd.enable = true;
+  environment.systemPackages = [
+    pkgs.libimobiledevice
+  ];
 }

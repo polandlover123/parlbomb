@@ -37,12 +37,12 @@
             options = {
               nixos = {
                 expr = ''
-                  let configs = (builtins.getFlake ("git+file://" + builtins.toString ./.)).nixosConfigurations; in (builtins.head (builtins.attrValues configs)).options
+                  let configs = (builtins.getFlake ("git+file://" + builtins.toString /home/admin/parlbomb)).nixosConfigurations; in (builtins.head (builtins.attrValues configs)).options
                 '';
               };
               home_manager = {
                 expr = ''
-                  let configs = (builtins.getFlake ("git+file://" + builtins.toString ./.)).nixosConfigurations; in (builtins.head (builtins.attrValues configs)).options.home-manager.users.type.getSubOptions []
+                  let configs = (builtins.getFlake ("git+file://" + builtins.toString /home/admin/parlbomb)).nixosConfigurations; in (builtins.head (builtins.attrValues configs)).options.home-manager.users.type.getSubOptions []
                 '';
               };
             };

@@ -3,7 +3,7 @@
     enable = true;
     font = {
       name = "Monaspace Radon";
-      size = 13;
+      size = 11;
     };
 
     settings = {
