@@ -4,6 +4,7 @@
   ...
 }: {
   imports = [
+    inputs.agenix.nixosModules.default
     ./hardware-configuration.nix
     ../../system
     ../../system/hardware/nvidia.nix
