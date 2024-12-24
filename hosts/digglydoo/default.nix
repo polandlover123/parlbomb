@@ -1,10 +1,10 @@
 {
   self,
   inputs,
+  pkgs,
   ...
 }: {
   imports = [
-    inputs.agenix.nixosModules.default
     ./hardware-configuration.nix
     ../../system
     ../../system/hardware/nvidia.nix
@@ -23,4 +23,9 @@
       inherit self;
     };
   };
+  services.usbmuxd.enable = true;
+
+  environment.systemPackages = [
+    pkgs.libimobiledevice
+  ];
 }

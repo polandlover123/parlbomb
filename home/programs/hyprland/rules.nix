@@ -8,7 +8,7 @@
       "float, class:^(imv)$"
       "workspace special:discord silent,class:^(WebCord)$"
       "workspace special:discord silent,class:^(discord)$"
-      "workspace special:spotify silent,initialTitle:^(Spotify|Spotify Premium)$"
+      "workspace special:spotify silent,initialTitle:^(Spotify Free|Spotify Premium)$"
       "float,class:(qalculate-gtk)"
       "workspace special:calculator,class:(qalculate-gtk)"
       "stayfocused, title:^()$,class:^(steam)$"

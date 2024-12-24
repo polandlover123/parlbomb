@@ -1,5 +1,9 @@
-{lib, ...}: {
-  imports = [./secrets.nix ./security.nix ./bootloader.nix ./users.nix ../nix ./zsh.nix ./ssh.nix];
+{
+  lib,
+  inputs,
+  ...
+}: {
+  imports = [inputs.agenix.nixosModules.default ./secrets.nix ./security.nix ./bootloader.nix ./users.nix ../nix ./zsh.nix ./ssh.nix];
   documentation.dev.enable = true;
   time.timeZone = "America/Edmonton";
   i18n.defaultLocale = "en_CA.UTF-8";

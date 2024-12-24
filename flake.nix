@@ -40,6 +40,10 @@
       url = "github:kzdkm/hyprspace";
       inputs.hyprland.follows = "hyprland";
     };
+    disko = {
+      url = "github:nix-community/disko";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {

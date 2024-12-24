@@ -5,7 +5,8 @@
   ...
 }: {
   imports = [
-    ./hardware-configuration.nix
+    inputs.disko.nixosModules.disko
+    ../../disk-config.nix
     ../../system
     ../../system/hardware/intel.nix
     inputs.home-manager.nixosModules.default

@@ -5,6 +5,7 @@
 }: {
   users = {
     mutableUsers = false;
+    users.root.initialPassword = "password";
     users.admin = {
       isNormalUser = true;
       shell = pkgs.zsh;
