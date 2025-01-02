@@ -12,7 +12,7 @@
     homeDirectory = "/home/admin";
     packages = with pkgs; [
       google-chrome
-      webcord-vencord
+      webcord
       firefox
       vscode
     ];

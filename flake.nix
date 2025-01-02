@@ -25,7 +25,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nixvim = {
-      url = "github:nix-community/nixvim";
+      url = "github:nix-community/nixvim/8938e09db14d510dcc2f266e8b2e738ee527d386";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     hyprsplit = {

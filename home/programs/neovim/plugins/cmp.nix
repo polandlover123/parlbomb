@@ -1,13 +1,9 @@
 {
   programs.nixvim.plugins = {
+    blink-compat.enable = true;
     blink-cmp = {
       enable = true;
       settings = {
-        nerd_font_variant = "mono";
-        accept.auto_brackets.enabled = true;
-        highlight = {
-          use_nvim_cmp_as_default = true;
-        };
         keymap = {
           "<C-b>" = [
             "scroll_documentation_up"
