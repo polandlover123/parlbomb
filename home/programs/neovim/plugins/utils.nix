@@ -2,11 +2,8 @@
   programs.nixvim = {
     extraPlugins = with pkgs.vimPlugins; [
       cheatsheet-nvim
-      nvim-window-picker
     ];
     plugins = {
-      gitblame.enable = true;
-
       codesnap = {
         enable = true;
         settings = {
@@ -29,17 +26,6 @@
       rainbow-delimiters.enable = true;
       yazi.enable = true;
       persistence.enable = true;
-      flash = {
-        enable = true;
-        settings.label.rainbow.enabled = true;
-      };
-      image = {
-        enable = true;
-        integrations.markdown = {
-          clearInInsertMode = true;
-          onlyRenderImageAtCursor = true;
-        };
-      };
       tmux-navigator.enable = true;
       comment.enable = true;
       nvim-autopairs.enable = true;
@@ -49,8 +35,8 @@
         enable = true;
         nixGrammars = true;
         settings = {
-          indent.enable = true;
           highlight.enable = true;
+          indent.enable = true;
         };
         folding = false;
         grammarPackages = pkgs.vimPlugins.nvim-treesitter.allGrammars;

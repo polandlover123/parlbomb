@@ -3,6 +3,7 @@
 
   programs.nixvim = {
     colorschemes.oxocarbon.enable = true;
+
     plugins = {
       barbecue = {
         enable = true;

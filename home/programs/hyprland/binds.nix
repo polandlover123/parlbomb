@@ -1,4 +1,8 @@
-{pkgs, ...}: let
+{
+  pkgs,
+  inputs,
+  ...
+}: let
   workspaces = builtins.concatLists (builtins.genList (x: let
       ws = let c = (x + 1) / 10; in builtins.toString (x + 1 - (c * 10));
     in [
@@ -24,10 +28,10 @@ in {
       bind = SHIFT, g, submap, INSERT2
       bind = SHIFT, v, submap, COMMAND
       bind = SHIFT, w, submap, WINDOW
-      bind = shift, d, togglesplit
       bind = shift, y, exec, grimblast copysave output
       bind = shift, e, exec, nautilus -w
       bind = shift, r, exec, alacritty -e nvim ~/parlbomb
+      bind = shift, d, exec, alacritty -e nvim ~/work/clones/homelab/
       bind = shift, q, exec, firefox
       bind = shift, o, exec, obsidian
       bind = shift, s, exec, spotify
@@ -35,6 +39,7 @@ in {
       bind = shift, p, exec, pavucontrol
       bind = shift, z, exec, google-chrome-stable --new-window
       bind = shift, b, exec, overskride
+      bind = shift, m, exec, anyrun --plugins ${inputs.anyrun.packages.${pkgs.system}.stdin}/lib/libstdin.so
 
       bind = shift, c, exec, code
       bind = shift, catchall, submap, reset

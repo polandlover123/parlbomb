@@ -2,9 +2,6 @@
   programs.nixvim.plugins = {
     typst-vim.enable = true;
     lsp-signature.enable = true;
-    lspkind = {
-      enable = true;
-    };
     lsp-format.enable = true;
     # lsp-lines.enable = true;
     lsp = {
