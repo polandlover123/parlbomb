@@ -13,7 +13,6 @@
   ];
   services = {displayManager.ly = {enable = true;};};
   networking.hostName = "digglydoo";
-  security.tpm2.enable = true;
   services.flatpak.enable = true;
   services = {fstrim.enable = true;};
   home-manager = {

@@ -15,17 +15,22 @@
   boot.initrd.availableKernelModules = ["xhci_pci" "nvme" "usb_storage" "sd_mod"];
   boot.initrd.kernelModules = [];
   boot.kernelModules = ["kvm-intel"];
+  boot.initrd.systemd.enable = true;
   boot.extraModulePackages = [];
 
   fileSystems."/" = {
-    device = "/dev/disk/by-uuid/29b25ad7-525a-4b38-a845-ed7000d7e9e6";
-    fsType = "ext4";
+    device = "/dev/disk/by-uuid/3803872a-c8df-4f04-a759-3e2eaca573d6";
+    fsType = "btrfs";
+    options = ["subvol=@"];
   };
 
-  boot.initrd.luks.devices."luks-ac14472d-585e-4545-9924-0ae370613657".device = "/dev/disk/by-uuid/ac14472d-585e-4545-9924-0ae370613657";
+  boot.initrd.luks.devices."luks-6367696a-8216-4072-9535-01d38e59ac81" = {
+    crypttabExtraOpts = ["tpm2-device=auto"];
+    device = "/dev/disk/by-uuid/6367696a-8216-4072-9535-01d38e59ac81";
+  };
 
   fileSystems."/boot" = {
-    device = "/dev/disk/by-uuid/1EC1-8388";
+    device = "/dev/disk/by-uuid/0A4E-FEC7";
     fsType = "vfat";
     options = ["fmask=0077" "dmask=0077"];
   };
@@ -39,5 +44,6 @@
   networking.useDHCP = lib.mkDefault true;
   # networking.interfaces.wlo1.useDHCP = lib.mkDefault true;
 
+  nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 }

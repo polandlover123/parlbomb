@@ -53,6 +53,7 @@
         layout = "dwindle";
       };
       input = {
+        special_fallthrough = true;
         repeat_rate = 75;
         repeat_delay = 200;
         accel_profile = "flat";

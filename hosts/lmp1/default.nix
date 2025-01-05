@@ -5,7 +5,7 @@
   ...
 }: {
   imports = [
-    ../../disk-config.nix
+    ./hardware-configuration.nix
     ../../system
     ../../system/hardware/intel.nix
     inputs.home-manager.nixosModules.default
@@ -59,5 +59,7 @@
   services.usbmuxd.enable = true;
   environment.systemPackages = [
     pkgs.libimobiledevice
+    pkgs.tpm2-tss
+    pkgs.tpm-tools
   ];
 }
