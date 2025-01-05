@@ -12,8 +12,6 @@
       efi.efiSysMountPoint = "/boot";
       efi.canTouchEfiVariables = true;
       grub = {
-        configurationName = "skibidi";
-
         enable = true;
         devices = ["nodev"];
         efiSupport = true;
