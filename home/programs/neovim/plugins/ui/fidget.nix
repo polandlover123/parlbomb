@@ -4,11 +4,7 @@
       enable = true;
       notification = {
         overrideVimNotify = true;
-      };
-      progress = {
-        display = {
-          doneIcon = "😎";
-        };
+        window.align = "top";
       };
     };
   };

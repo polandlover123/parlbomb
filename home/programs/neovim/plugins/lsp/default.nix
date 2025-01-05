@@ -42,9 +42,6 @@
                   let configs = (builtins.getFlake ("git+file://" + builtins.toString /home/admin/parlbomb)).nixosConfigurations; in (builtins.head (builtins.attrValues configs)).options.home-manager.users.type.getSubOptions []
                 '';
               };
-              nixvim.expr = ''
-                let configs = (builtins.getFlake ("git+file://" + builtins.toString /home/admin/parlbomb)).nixosConfigurations; in (builtins.head (builtins.attrValues configs)).options.programs.nixvim.getSubOptions
-              '';
             };
           };
         };

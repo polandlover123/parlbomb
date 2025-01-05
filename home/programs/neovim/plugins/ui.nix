@@ -22,7 +22,6 @@
         enable = true;
         settings = {
           options.disabled_filetypes.statusline = ["dashboard" "alpha" "neo-tree"];
-
           alwaysDivideMiddle = true;
           globalstatus = true;
           ignoreFocus = ["neo-tree"];

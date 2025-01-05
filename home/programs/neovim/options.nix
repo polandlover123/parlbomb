@@ -16,16 +16,7 @@
       relativenumber = true;
 
       autoindent = true;
-      clipboard = {
-        register = "unnamedplus";
-
-        providers = {
-          wl-copy = {
-            enable = true;
-          };
-        };
-      };
-
+      clipboard = "unnamed,unnamedplus";
       expandtab = true;
       tabstop = 2;
       softtabstop = 2;

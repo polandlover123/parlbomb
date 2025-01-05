@@ -23,16 +23,14 @@
               "lsp"
               "path"
               "copilot"
-              "git"
-              "buffer"
             ];
             providers = {
+              lsp = {
+                name = "LSP";
+                module = "blink.cmp.sources.lsp";
+              };
               copilot = {
                 name = "copilot";
-                module = "blink-cmp-copilot";
-              };
-              git = {
-                name = "git";
                 module = "blink-cmp-copilot";
               };
             };
