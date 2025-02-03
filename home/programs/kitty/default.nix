@@ -2,9 +2,10 @@
   programs.kitty = {
     enable = true;
     font = {
-      name = "Monaspace Radon";
+      name = "JetBrains Mono Nerd Font";
       size = 11;
     };
+    # tigglemeister
 
     settings = {
       scrollback_lines = 10000;
@@ -23,7 +24,7 @@
       ## upstream: https://github.com/nyoom-engineering/oxocarbon.nvim
       ## blurb:    A dark and light Neovim theme, inspired by IBM Carbon.
 
-      font_features     Monaspace Radon +calt +liga +ss01 +ss02 +ss03 +ss04 +ss05 +ss06 +ss07 +ss08 +ss09
+      font_features     JetBrains Mono +calt +liga +ss01 +ss02 +ss03 +ss04 +ss05 +ss06 +ss07 +ss08 +ss09
 
 
       # The basic colors

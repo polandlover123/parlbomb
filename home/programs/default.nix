@@ -3,6 +3,7 @@
     pkgs.imv
   ];
   imports = [
+    ./ags
     ./hyprland
     ./spotify
     ./hyprlock

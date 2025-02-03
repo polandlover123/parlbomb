@@ -4,15 +4,15 @@
     settings = {
       font = {
         normal = {
-          family = "Monaspace Radon";
+          family = "JetbrainsMono Nerd Font";
           style = "Regular";
         };
         bold = {
-          family = "Monaspace Radon";
+          family = "JetbrainsMono Nerd Font";
           style = "Bold";
         };
         italic = {
-          family = "Monaspace Radon";
+          family = "JetbrainsMono Nerd Font";
           style = "Italic";
         };
       };
