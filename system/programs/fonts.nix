@@ -18,17 +18,21 @@
       #mono
       jetbrains-mono
       nerd-fonts.jetbrains-mono
-      nerd-fonts.victor-mono
+      twemoji-color-font
     ];
     fontconfig = {
       enable = true;
+      allowBitmaps = false;
       cache32Bit = true;
-      hinting.enable = true;
+      hinting = {
+        enable = true;
+      };
       antialias = true;
       defaultFonts = {
-        monospace = ["JetbrainsMono"];
+        monospace = ["Jetbrains Mono"];
         serif = ["Monaspace Xenon"];
         sansSerif = ["Monaspace Radon"];
+        emoji = ["Twemoji"];
       };
     };
   };

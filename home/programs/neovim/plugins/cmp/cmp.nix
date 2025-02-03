@@ -1,4 +1,5 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   programs.nixvim = {
     extraPlugins = with pkgs.vimPlugins; [
       blink-cmp-copilot
@@ -36,49 +37,7 @@
             };
           };
           keymap = {
-            "<C-b>" = [
-              "scroll_documentation_up"
-              "fallback"
-            ];
-            "<C-e>" = [
-              "hide"
-            ];
-            "<C-f>" = [
-              "scroll_documentation_down"
-              "fallback"
-            ];
-            "<C-n>" = [
-              "select_next"
-              "fallback"
-            ];
-            "<C-p>" = [
-              "select_prev"
-              "fallback"
-            ];
-            "<C-space>" = [
-              "show"
-              "show_documentation"
-              "hide_documentation"
-            ];
-            "<C-y>" = [
-              "select_and_accept"
-            ];
-            "<Down>" = [
-              "select_next"
-              "fallback"
-            ];
-            "<S-Tab>" = [
-              "snippet_backward"
-              "fallback"
-            ];
-            "<Tab>" = [
-              "snippet_forward"
-              "fallback"
-            ];
-            "<Up>" = [
-              "select_prev"
-              "fallback"
-            ];
+            preset = "super-tab";
           };
         };
       };

@@ -5,12 +5,17 @@
     ./trouble.nix
   ];
   programs.nixvim.plugins = {
+    typescript-tools.enable = true;
+    ts-autotag.enable = true;
     lsp-format.enable = true;
+    emmet.enable = true;
     lsp = {
       inlayHints = true;
       enable = true;
       keymaps.silent = true;
       servers = {
+        ts_ls.enable = true;
+        svelte.enable = true;
         clangd.enable = true;
         rust_analyzer = {
           enable = true;
@@ -19,6 +24,7 @@
           installRustfmt = true;
         };
         bashls.enable = true;
+        tailwindcss.enable = true;
         gopls.enable = true;
         cssls.enable = true;
         html.enable = true;

@@ -44,9 +44,9 @@
       };
     };
     font = {
-      name = "Monaspace Radon";
-      package = pkgs.monaspace;
-      size = 9;
+      name = "Fira Sans";
+      package = pkgs.fira-sans;
+      size = 10;
     };
     theme = {
       name = "Graphite-pink-Dark";
