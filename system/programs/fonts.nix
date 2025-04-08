@@ -13,7 +13,6 @@
       lexend
       ipafont
       source-code-pro
-      monaspace
 
       #mono
       jetbrains-mono
@@ -30,8 +29,8 @@
       antialias = true;
       defaultFonts = {
         monospace = ["Jetbrains Mono"];
-        serif = ["Monaspace Xenon"];
-        sansSerif = ["Monaspace Radon"];
+        serif = ["Fira Sans"];
+        sansSerif = ["Fira Sans"];
         emoji = ["Twemoji"];
       };
     };

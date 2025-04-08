@@ -3,6 +3,13 @@
     plugins = {
       neo-tree = {
         enable = true;
+        extraOptions = {
+          filtered_items = {
+            visible = true;
+            hide_dotfiles = false;
+            hide_gitignore = false;
+          };
+        };
       };
       oil = {
         enable = true;

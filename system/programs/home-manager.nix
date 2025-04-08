@@ -3,6 +3,6 @@
   home-manager = {
     useGlobalPkgs = true;
     useUserPackages = true;
-    backupFileExtension = "hmbackup";
+    backupFileExtension = "hm_backup";
   };
 }

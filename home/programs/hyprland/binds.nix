@@ -22,12 +22,9 @@ in {
     extraConfig = ''
       #-----------------------------------------
       # submap 1
-      bind = SUPERSHIFT, space, submap, INSERT
-      submap = INSERT
+      bind = SUPERSHIFT, space, submap, insert
+      submap = insert
       bind = SUPERSHIFT, space, submap, reset
-      bind = SHIFT, g, submap, INSERT2
-      bind = SHIFT, v, submap, COMMAND
-      bind = SHIFT, w, submap, WINDOW
       bind = shift, y, exec, grimblast copysave output
       bind = shift, e, exec, nautilus -w
       bind = shift, r, exec, alacritty -e nvim ~/parlbomb
@@ -42,50 +39,6 @@ in {
       bind = shift, m, exec, anyrun --plugins ${inputs.anyrun.packages.${pkgs.system}.stdin}/lib/libstdin.so
 
       bind = shift, c, exec, code
-      bind = shift, catchall, submap, reset
-      bind = super, catchall, submap, reset
-      bind = , escape, submap, reset
-
-      submap = reset
-
-      #-----------------------------------------
-      #command mode
-      submap = WINDOW
-      bind = supershift, space, submap, reset
-      bind = shift, d, togglesplit
-      bind = shift, catchall, submap, reset
-      bind = super, catchall, submap, reset
-      bind = , escape, submap, reset
-      submap = reset
-      #-----------------------------------------
-      #command mode
-      submap = COMMAND
-      bind = supershift, space, submap, reset
-      bind = shift, d, exec, kitty
-      bind = shift, g, submap, insert2
-      bind = shift, catchall, submap, reset
-      bind = super, catchall, submap, reset
-      bind = , escape, submap, reset
-      submap = reset
-
-      #-----------------------------------------
-      # insert2
-      submap = insert2
-      bind = supershift, space, submap, reset
-      bind = shift, d, exec, kitty
-      bind = shift, e, exec, alacritty -e man configuration.nix
-      bind = shift, r, exec, alacritty -e man home-configuration.nix
-      bind = shift, catchall, submap, reset
-      bind = super, catchall, submap, reset
-      bind = , escape, submap, reset
-      submap = reset
-      #-----------------------------------------
-
-      # visual
-      bind = supershift, return, submap, visual
-      submap = visual
-      bind = supershift, space, submap, reset
-      bind = shift, d, togglesplit
       bind = shift, catchall, submap, reset
       bind = super, catchall, submap, reset
       bind = , escape, submap, reset

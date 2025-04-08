@@ -19,5 +19,4 @@
     };
   };
 
-  hardware.pulseaudio.enable = lib.mkForce false;
 }

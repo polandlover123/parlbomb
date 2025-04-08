@@ -234,6 +234,6 @@
     "format": " {}",
     "tooltip": false,
     "always-on": true,
-    "default-submap": "NORMAL"
+    "default-submap": "normal"
   }
 }

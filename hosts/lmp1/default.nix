@@ -13,6 +13,7 @@
   # services = {displayManager.ly = {enable = true;};};
   hardware.sensor.iio.enable = true;
   services = {
+    flatpak.enable = true;
     asusd = {
       enable = true;
       package = pkgs.asusctl;
@@ -53,7 +54,6 @@
       inherit inputs;
       inherit self;
     };
-    backupFileExtension = "hmbackup";
   };
   # iphone backup
   services.usbmuxd.enable = true;

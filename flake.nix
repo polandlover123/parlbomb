@@ -11,7 +11,13 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    hyprland = {url = "git+https://github.com/hyprwm/hyprland?submodules=1";};
+    hyprland = {
+      type = "git";
+      url = "https://github.com/hyprwm/hyprland";
+      ref = "refs/tags/v0.48.1";
+      submodules = true;
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     nixos-anyrun-options = {
       url = "github:n3oney/anyrun-nixos-options";
     };
@@ -25,7 +31,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nixvim = {
-      url = "github:nix-community/nixvim/8938e09db14d510dcc2f266e8b2e738ee527d386";
+      url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     hyprsplit = {
