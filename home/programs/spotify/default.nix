@@ -8,7 +8,9 @@
     spicePkgs = inputs.spicetify.legacyPackages.${pkgs.system};
   in {
     enable = true;
-    theme = spicePkgs.themes.spotifyNoPremium;
-    enabledExtensions = with spicePkgs.extensions; [adblock fullAlbumDate shuffle];
+    windowManagerPatch = true;
+    wayland = true;
+    theme = spicePkgs.themes.turntable;
+    enabledExtensions = with spicePkgs.extensions; [betterGenres lastfm popupLyrics adblock fullAlbumDate shuffle];
   };
 }

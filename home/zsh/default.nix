@@ -30,7 +30,7 @@
       };
       syntaxHighlighting.enable = true;
       autosuggestion.enable = true;
-      initExtra = ''
+      initContent = ''
         # search history based on what's typed in the prompt
         autoload -U history-search-end
         zle -N history-beginning-search-backward-end history-search-end

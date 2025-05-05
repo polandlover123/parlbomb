@@ -2,14 +2,11 @@
   pkgs,
   lib,
   inputs,
-  config,
   osConfig,
   ...
 }: {
-  imports = [inputs.anyrun.homeManagerModules.default];
   programs.anyrun = {
     enable = true;
-
     config = {
       plugins = with inputs.anyrun.packages.${pkgs.system}; [
         inputs.nixos-anyrun-options.packages.${pkgs.system}.default
