@@ -16,6 +16,17 @@
           style = "Italic";
         };
       };
+      window = {
+        padding = {
+          x = 10;
+          y = 10;
+        };
+      };
+      cursor.style = "Beam";
+      cursor = {
+        thickness = 0.20;
+        unfocused_hollow = true;
+      };
       colors.primary = {
         background = "#161616";
         foreground = "#ffffff";
@@ -25,24 +36,24 @@
         background = "#ee5396";
       };
       colors.normal = {
-        black = "#262626";
-        magenta = "#ff73b6";
-        green = "#42be65";
-        yellow = "#ffe97b";
-        blue = "#33b1ff";
-        red = "#ee5396";
-        cyan = "#3ddbd9";
-        white = "#dde1e6";
+        black = "#151515";
+        magenta = "#a988b0";
+        green = "#8c977d";
+        yellow = "#d9bc8c";
+        blue = "#8da3b9";
+        red = "#b66467";
+        cyan = "#8aa6a2";
+        white = "#e8e3e3";
       };
       colors.bright = {
-        black = "#393939";
-        magenta = "#ff73b6";
-        green = "#42be65";
-        yellow = "#ffe97b";
-        blue = "#33b1ff";
-        red = "#ee5396";
-        cyan = "#3ddbd9";
-        white = "#ffffff";
+        black = "#424242";
+        magenta = "#a988b0";
+        green = "#8c977d";
+        yellow = "#d9bc8c";
+        blue = "#8da3b9";
+        red = "#b66467";
+        cyan = "#8aa6a2";
+        white = "#e8e3e3";
       };
     };
   };
