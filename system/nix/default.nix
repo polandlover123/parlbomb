@@ -27,7 +27,7 @@
       accept-flake-config = true;
       auto-optimise-store = true;
       builders-use-substitutes = true;
-      experimental-features = ["nix-command" "flakes"];
+      experimental-features = ["nix-command" "flakes" "repl-flake"];
       flake-registry = "/etc/nix/registry.json";
       keep-going = true;
       # for direnv GC roots

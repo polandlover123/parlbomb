@@ -18,8 +18,8 @@
       };
       window = {
         padding = {
-          x = 10;
-          y = 10;
+          x = 15;
+          y = 15;
         };
       };
       cursor.style = "Beam";
