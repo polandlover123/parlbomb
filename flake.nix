@@ -4,6 +4,7 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     ags.url = "github:aylur/ags";
+    astal.url = "github:aylur/astal";
     lanzaboote.url = "github:nix-community/lanzaboote";
     agenix = {
       url = "github:ryantm/agenix";

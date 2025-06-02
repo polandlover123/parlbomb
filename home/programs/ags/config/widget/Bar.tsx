@@ -62,7 +62,7 @@ function BatteryLevel() {
     <label label={bind(bat, "percentage").as(p =>
       `${Math.floor(p * 100)} %`
     )} />
-  </box>
+  </box >
 }
 
 function Media() {
@@ -96,18 +96,20 @@ function Workspaces() {
   const hypr = Hyprland.get_default()
 
   return <box className="Workspaces">
-    {bind(hypr, "focusedWorkspace").as(fw =>
-      fw ? (
-        <button className="focused" onClicked={() => fw.focus()}>
-          {fw.id}
+    {bind(hypr, "workspaces").as(wss => wss
+      .filter(ws => !(ws.id >= -99 && ws.id <= -2)) // filter out special workspaces
+      .sort((a, b) => a.id - b.id)
+      .map(ws => (
+        <button
+          className={bind(hypr, "focusedWorkspace").as(fw =>
+            ws === fw ? "focused" : "")}
+          onClicked={() => ws.focus()}>
+          {ws.id}
         </button>
-      ) : null
+      ))
     )}
   </box>
-}
-
-
-function FocusedClient() {
+} function FocusedClient() {
   const hypr = Hyprland.get_default()
   const focused = bind(hypr, "focusedClient")
 
@@ -119,17 +121,31 @@ function FocusedClient() {
     ))}
   </box>
 }
+// clock
 
-function Time({ format = "%H:%M - %A %e." }) {
-  const time = Variable<string>("").poll(1000, () =>
-    GLib.DateTime.new_now_local().format(format)!)
+function Clock() {
+  return <box orientation={1} className="clock">
+    <Time />
+    <Date />
 
+  </box>
+}
+function Date() {
+  const date = Variable("").poll(1000, "date +'%A %-e %B'")
   return <label
-    className="Time"
-    onDestroy={() => time.drop()}
+    className="date"
+    label={date()}
+  />
+}
+function Time() {
+  const time = Variable("").poll(1000, "date +'%I:%M %p'")
+  return <label
+    className="time"
     label={time()}
   />
 }
+
+// clock end
 
 export default function Bar(monitor: Gdk.Monitor) {
   const { TOP, LEFT, RIGHT } = Astal.WindowAnchor
@@ -140,18 +156,20 @@ export default function Bar(monitor: Gdk.Monitor) {
     exclusivity={Astal.Exclusivity.EXCLUSIVE}
     anchor={TOP | LEFT | RIGHT}>
     <centerbox>
-      <box hexpand halign={Gtk.Align.START}>
+      <box
+        heightRequest={30}
+        hexpand halign={Gtk.Align.START}>
         <Workspaces />
-        <FocusedClient />
+        <box hexpand halign={Gtk.Align.END} >
+          <Wifi />
+        </box>
       </box>
       <box>
-        <Media />
+        <Clock />
       </box>
-      <box hexpand halign={Gtk.Align.END} >
-        <SysTray />
-        <Wifi />
+      <box hexpand halign={Gtk.Align.END} className="Right">
         <BatteryLevel />
-        <Time />
+
       </box>
     </centerbox>
   </window>

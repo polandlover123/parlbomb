@@ -11,10 +11,7 @@
     username = "admin";
     homeDirectory = "/home/admin";
     packages = with pkgs; [
-      google-chrome
-      webcord
       firefox
-      vscode
     ];
   };
   programs.home-manager.enable = true;

@@ -1,9 +1,21 @@
 @use "sass:color";
-
-$bg: #212223;
-$fg: #f1f1f1;
-$accent: #378DF7;
+$fg: #E8E3E3;
+$bg: #151515;
+$accent: #8aa6a2;
 $radius: 7px;
+$bg: #151515;
+$red: #B66467;
+$green: #8C977D;
+$yellow: #D9BC8C;
+$blue: #8DA3B9;
+$purple: #A988B0;
+$cyan: #8AA6A2;
+$pink: #A988B0;
+$orange: #D9BC8C;
+
+* {
+  all: unset;
+}
 
 window.Bar {
   font-family: "Fira Sans";
@@ -15,18 +27,66 @@ window.Bar {
   font-size: 1.1em;
   font-weight: bold;
 
+  .nixos {
+    background-color: transparent;
+  }
+
+  icon {
+    color: $accent;
+    font-size: 1.5em;
+    margin: 0 0.3em 0 0.3em;
+  }
+
+  .Battery {
+    margin-right: 1em;
+  }
+
   label {
+    color: $accent;
     margin: 5px;
   }
 
+
+  .clock {
+    margin: 5px 0 5px 0
+  }
+
+  .clock>* {
+    color: $accent;
+    font-weight: 500;
+    font-size: .9em;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+  }
+
+  .date {
+    color: darken($green, 20%);
+    font-family: "Victor Mono";
+    font-style: italic;
+
+    font-weight: 800;
+    font-size: .9em;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+  }
+
+  .time {
+    color: $green;
+    font-size: 1.2em;
+    margin-top: 0;
+    padding-top: 0;
+  }
+
+
   .Workspaces {
+    margin: 1em 1em 1em 1em;
+
     button {
       all: unset;
       background-color: transparent;
 
       &:hover label {
         background-color: color.adjust($fg, $alpha: -0.84);
-        border-color: color.adjust($accent, $alpha: -0.8);
       }
 
       &:active label {
@@ -35,6 +95,7 @@ window.Bar {
     }
 
     label {
+      color: $red;
       transition: 200ms;
       padding: 0 8px;
       margin: 2px;
@@ -43,8 +104,7 @@ window.Bar {
     }
 
     .focused label {
-      color: #d9bc8c;
-      border-color: $accent;
+      color: $yellow;
     }
   }
 
@@ -105,5 +165,6 @@ window.Bar {
       min-width: 1em;
       margin: -.2em;
     }
+
   }
 }

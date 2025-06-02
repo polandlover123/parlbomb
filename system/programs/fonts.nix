@@ -15,6 +15,7 @@
       source-code-pro
 
       #mono
+      victor-mono
       jetbrains-mono
       nerd-fonts.jetbrains-mono
       twemoji-color-font

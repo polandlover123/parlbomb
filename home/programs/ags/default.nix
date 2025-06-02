@@ -5,6 +5,7 @@
 }: {
   imports = [inputs.ags.homeManagerModules.default];
   home.packages = with inputs.ags.packages.${pkgs.system}; [
+    inputs.astal.packages.${pkgs.system}.default
     hyprland
     mpris
     battery
