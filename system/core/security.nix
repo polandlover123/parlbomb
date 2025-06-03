@@ -49,6 +49,7 @@
     pam = {
       sshAgentAuth.enable = true;
       services = {
+        astal-auth = {};
         hyprlock.text = "auth include login";
         greetd.enableGnomeKeyring = true;
         login = {
