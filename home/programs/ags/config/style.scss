@@ -48,15 +48,8 @@ window.Bar {
 
 
   .clock {
-    margin: 5px 0 5px 0
-  }
-
-  .clock>* {
-    color: $accent;
-    font-weight: 500;
-    font-size: .9em;
-    margin: 0 0 0 0;
-    padding: 0 0 0 0;
+    margin: 0.5em 0 0.5em 0;
+    font-weight: 600;
   }
 
   .date {
@@ -71,10 +64,10 @@ window.Bar {
   }
 
   .time {
-    color: $green;
+    color: lighten($green, 10%);
     font-size: 1.2em;
-    margin-top: 0;
-    padding-top: 0;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
   }
 
 

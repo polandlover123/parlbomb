@@ -3,6 +3,7 @@ import { Variable, GLib, bind } from "astal"
 import { Astal, Gtk, Gdk } from "astal/gtk3"
 import Hyprland from "gi://AstalHyprland"
 import Mpris from "gi://AstalMpris"
+import Popover from "./Popover"
 import Battery from "gi://AstalBattery"
 import Wp from "gi://AstalWp"
 import Network from "gi://AstalNetwork"
@@ -124,14 +125,16 @@ function Workspaces() {
 // clock
 
 function Clock() {
-  return <box orientation={1} className="clock">
-    <Time />
-    <Date />
+  return <button onClicked={self => print(self, "pressed")} className="clock">
+    < box orientation={1} className="clockbox" >
+      <Time />
+      <Date />
+    </box >
 
-  </box>
+  </button >
 }
 function Date() {
-  const date = Variable("").poll(1000, "date +'%A %-e %B'")
+  const date = Variable("").poll(1000, "date +'%A %-e %B, %Y'")
   return <label
     className="date"
     label={date()}
@@ -145,7 +148,11 @@ function Time() {
   />
 }
 
+
+
 // clock end
+//
+// tabovers
 
 export default function Bar(monitor: Gdk.Monitor) {
   const { TOP, LEFT, RIGHT } = Astal.WindowAnchor
