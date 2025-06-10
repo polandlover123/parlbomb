@@ -2,8 +2,6 @@
   wayland.windowManager.hyprland = {
     settings = {
       exec-once = [
-        "waybar"
-        "iio-hyprland"
         "spotify"
         "webcord"
         "swww-daemon"

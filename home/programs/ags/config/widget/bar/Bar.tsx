@@ -10,24 +10,26 @@ export default function Bar(monitor: Gdk.Monitor) {
   const { TOP, LEFT, RIGHT } = Astal.WindowAnchor
 
   return <window
+    name="bar"
     className="Bar"
+    application={App}
     gdkmonitor={monitor}
     exclusivity={Astal.Exclusivity.EXCLUSIVE}
     anchor={TOP | LEFT | RIGHT}>
     <centerbox>
       <box
-        heightRequest={30}
+        heightRequest={25}
         hexpand halign={Gtk.Align.START}>
         <Workspaces />
-        <box hexpand halign={Gtk.Align.END} >
-          <Wifi />
-        </box>
       </box>
-      <box>
+      <box hexpand halign={Gtk.Align.CENTER} className="Center">
         <Clock />
       </box>
       <box hexpand halign={Gtk.Align.END} className="Right">
+        <Wifi />
+
         <BatteryLevel />
+
 
       </box>
     </centerbox>

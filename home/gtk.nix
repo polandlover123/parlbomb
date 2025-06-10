@@ -34,26 +34,26 @@
     cursorTheme = {
       name = "macOS-Monterey";
       package = pkgs.apple-cursor;
-      size = 22;
+      size = 24;
     };
     enable = true;
     iconTheme = {
-      name = "WhiteSur-pink";
-      package = pkgs.whitesur-icon-theme.override {
-        themeVariants = ["pink"];
+      name = "WhiteSur";
+      package =
+        pkgs.whitesur-icon-theme {
+        };
+      font = {
+        name = "Fira Sans";
+        package = pkgs.fira-sans;
+        size = 10;
       };
-    };
-    font = {
-      name = "Fira Sans";
-      package = pkgs.fira-sans;
-      size = 10;
-    };
-    theme = {
-      name = "Graphite-pink-Dark";
-      package = pkgs.graphite-gtk-theme.override {
-        colorVariants = ["dark"];
-        themeVariants = ["pink"];
-        tweaks = ["rimless" "darker" "normal" "colorful"];
+      theme = {
+        name = "Graphite-pink-Dark";
+        package = pkgs.graphite-gtk-theme.override {
+          colorVariants = ["dark"];
+          themeVariants = ["pink"];
+          tweaks = ["rimless" "darker" "normal" "colorful"];
+        };
       };
     };
   };

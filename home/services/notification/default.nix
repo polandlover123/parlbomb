@@ -1,6 +1,6 @@
 {
   services.swaync = {
-    enable = true;
+    enable = false;
     style = builtins.readFile ./style.css;
     settings = {
       positionX = "right";
